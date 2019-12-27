@@ -51,8 +51,13 @@
             this.prize12 = new System.Windows.Forms.Button();
             this.prize15 = new System.Windows.Forms.Button();
             this.prizePanel = new System.Windows.Forms.Panel();
+            this.lifeline5050 = new System.Windows.Forms.Button();
+            this.lifelineAudience = new System.Windows.Forms.Button();
+            this.lifelineSwap = new System.Windows.Forms.Button();
+            this.lifelinePanel = new System.Windows.Forms.Panel();
             this.questionPanel.SuspendLayout();
             this.prizePanel.SuspendLayout();
+            this.lifelinePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // optionA
@@ -399,12 +404,71 @@
             this.prizePanel.TabIndex = 21;
             this.prizePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.prizePanel_Paint);
             // 
+            // lifeline5050
+            // 
+            this.lifeline5050.BackColor = System.Drawing.Color.Transparent;
+            this.lifeline5050.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lifeline5050.BackgroundImage")));
+            this.lifeline5050.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.lifeline5050.FlatAppearance.BorderSize = 0;
+            this.lifeline5050.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lifeline5050.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.lifeline5050.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lifeline5050.ForeColor = System.Drawing.SystemColors.Control;
+            this.lifeline5050.Location = new System.Drawing.Point(-6, 2);
+            this.lifeline5050.Name = "lifeline5050";
+            this.lifeline5050.Size = new System.Drawing.Size(115, 69);
+            this.lifeline5050.TabIndex = 6;
+            this.lifeline5050.UseVisualStyleBackColor = false;
+            // 
+            // lifelineAudience
+            // 
+            this.lifelineAudience.BackColor = System.Drawing.Color.Transparent;
+            this.lifelineAudience.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lifelineAudience.BackgroundImage")));
+            this.lifelineAudience.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.lifelineAudience.FlatAppearance.BorderSize = 0;
+            this.lifelineAudience.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lifelineAudience.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.lifelineAudience.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lifelineAudience.ForeColor = System.Drawing.SystemColors.Control;
+            this.lifelineAudience.Location = new System.Drawing.Point(-6, 69);
+            this.lifelineAudience.Name = "lifelineAudience";
+            this.lifelineAudience.Size = new System.Drawing.Size(115, 69);
+            this.lifelineAudience.TabIndex = 22;
+            this.lifelineAudience.UseVisualStyleBackColor = false;
+            // 
+            // lifelineSwap
+            // 
+            this.lifelineSwap.BackColor = System.Drawing.Color.Transparent;
+            this.lifelineSwap.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lifelineSwap.BackgroundImage")));
+            this.lifelineSwap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.lifelineSwap.FlatAppearance.BorderSize = 0;
+            this.lifelineSwap.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lifelineSwap.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.lifelineSwap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lifelineSwap.ForeColor = System.Drawing.SystemColors.Control;
+            this.lifelineSwap.Location = new System.Drawing.Point(-6, 136);
+            this.lifelineSwap.Name = "lifelineSwap";
+            this.lifelineSwap.Size = new System.Drawing.Size(115, 69);
+            this.lifelineSwap.TabIndex = 23;
+            this.lifelineSwap.UseVisualStyleBackColor = false;
+            // 
+            // lifelinePanel
+            // 
+            this.lifelinePanel.Controls.Add(this.lifelineSwap);
+            this.lifelinePanel.Controls.Add(this.lifelineAudience);
+            this.lifelinePanel.Controls.Add(this.lifeline5050);
+            this.lifelinePanel.Location = new System.Drawing.Point(0, 0);
+            this.lifelinePanel.Name = "lifelinePanel";
+            this.lifelinePanel.Size = new System.Drawing.Size(128, 231);
+            this.lifelinePanel.TabIndex = 24;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1111, 652);
+            this.Controls.Add(this.lifelinePanel);
             this.Controls.Add(this.prizePanel);
             this.Controls.Add(this.questionPanel);
             this.MaximizeBox = false;
@@ -412,6 +476,7 @@
             this.Text = "Who Wants To Be A Millionaire";
             this.questionPanel.ResumeLayout(false);
             this.prizePanel.ResumeLayout(false);
+            this.lifelinePanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -440,6 +505,10 @@
         private System.Windows.Forms.Button prize12;
         private System.Windows.Forms.Button prize15;
         private System.Windows.Forms.Panel prizePanel;
+        private System.Windows.Forms.Button lifeline5050;
+        private System.Windows.Forms.Button lifelineAudience;
+        private System.Windows.Forms.Button lifelineSwap;
+        private System.Windows.Forms.Panel lifelinePanel;
     }
 }
 
