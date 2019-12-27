@@ -55,6 +55,7 @@
             this.lifelineAudience = new System.Windows.Forms.Button();
             this.lifelineSwap = new System.Windows.Forms.Button();
             this.lifelinePanel = new System.Windows.Forms.Panel();
+            this.timer = new System.Windows.Forms.Button();
             this.questionPanel.SuspendLayout();
             this.prizePanel.SuspendLayout();
             this.lifelinePanel.SuspendLayout();
@@ -533,12 +534,33 @@
             this.lifelinePanel.Size = new System.Drawing.Size(128, 231);
             this.lifelinePanel.TabIndex = 24;
             // 
+            // timer
+            // 
+            this.timer.BackColor = System.Drawing.Color.Transparent;
+            this.timer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("timer.BackgroundImage")));
+            this.timer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.timer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.timer.FlatAppearance.BorderSize = 0;
+            this.timer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.timer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.timer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.timer.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
+            this.timer.Location = new System.Drawing.Point(377, 24);
+            this.timer.Name = "timer";
+            this.timer.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.timer.Size = new System.Drawing.Size(115, 69);
+            this.timer.TabIndex = 24;
+            this.timer.Text = "00";
+            this.timer.UseVisualStyleBackColor = false;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1111, 649);
+            this.Controls.Add(this.timer);
             this.Controls.Add(this.lifelinePanel);
             this.Controls.Add(this.prizePanel);
             this.Controls.Add(this.questionPanel);
@@ -579,6 +601,7 @@
         private System.Windows.Forms.Button optionC;
         private System.Windows.Forms.Button optionB;
         private System.Windows.Forms.Button optionA;
+        private System.Windows.Forms.Button timer;
     }
 }
 
