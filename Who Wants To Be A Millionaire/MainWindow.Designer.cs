@@ -56,6 +56,7 @@
             this.lifelineSwap = new System.Windows.Forms.Button();
             this.lifelinePanel = new System.Windows.Forms.Panel();
             this.timer = new System.Windows.Forms.Button();
+            this.nextQuestionbtn = new System.Windows.Forms.Button();
             this.questionPanel.SuspendLayout();
             this.prizePanel.SuspendLayout();
             this.lifelinePanel.SuspendLayout();
@@ -69,13 +70,12 @@
             this.question.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.question.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.question.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.question.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.question.Font = new System.Drawing.Font("Maiandra GD", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.question.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.question.Location = new System.Drawing.Point(45, 15);
             this.question.Name = "question";
             this.question.Size = new System.Drawing.Size(778, 100);
             this.question.TabIndex = 1;
-            this.question.Text = "Test";
             this.question.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.question.UseVisualStyleBackColor = true;
             // 
@@ -105,14 +105,14 @@
             this.optionD.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.optionD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.optionD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.optionD.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optionD.Font = new System.Drawing.Font("Maiandra GD", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.optionD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.optionD.Location = new System.Drawing.Point(437, 177);
             this.optionD.Name = "optionD";
             this.optionD.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.optionD.Size = new System.Drawing.Size(359, 50);
             this.optionD.TabIndex = 5;
-            this.optionD.Text = "Test";
+            this.optionD.Text = "D. ";
             this.optionD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.optionD.UseVisualStyleBackColor = false;
             // 
@@ -126,14 +126,14 @@
             this.optionC.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.optionC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.optionC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.optionC.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optionC.Font = new System.Drawing.Font("Maiandra GD", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.optionC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.optionC.Location = new System.Drawing.Point(72, 177);
             this.optionC.Name = "optionC";
             this.optionC.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.optionC.Size = new System.Drawing.Size(359, 50);
             this.optionC.TabIndex = 4;
-            this.optionC.Text = "Test";
+            this.optionC.Text = "C .";
             this.optionC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.optionC.UseVisualStyleBackColor = false;
             // 
@@ -147,14 +147,14 @@
             this.optionB.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.optionB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.optionB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.optionB.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optionB.Font = new System.Drawing.Font("Maiandra GD", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.optionB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.optionB.Location = new System.Drawing.Point(437, 121);
             this.optionB.Name = "optionB";
             this.optionB.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.optionB.Size = new System.Drawing.Size(359, 50);
             this.optionB.TabIndex = 3;
-            this.optionB.Text = "Test";
+            this.optionB.Text = "B. ";
             this.optionB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.optionB.UseVisualStyleBackColor = false;
             // 
@@ -168,14 +168,14 @@
             this.optionA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.optionA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.optionA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.optionA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optionA.Font = new System.Drawing.Font("Maiandra GD", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.optionA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.optionA.Location = new System.Drawing.Point(72, 121);
             this.optionA.Name = "optionA";
             this.optionA.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.optionA.Size = new System.Drawing.Size(359, 50);
             this.optionA.TabIndex = 2;
-            this.optionA.Text = "Test";
+            this.optionA.Text = "A. ";
             this.optionA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.optionA.UseVisualStyleBackColor = false;
             // 
@@ -188,13 +188,13 @@
             this.prize7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.prize7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.prize7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.prize7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prize7.Font = new System.Drawing.Font("Maiandra GD", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prize7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.prize7.Location = new System.Drawing.Point(11, 358);
             this.prize7.Name = "prize7";
             this.prize7.Size = new System.Drawing.Size(205, 36);
             this.prize7.TabIndex = 13;
-            this.prize7.Text = "Test";
+            this.prize7.Text = "7. £4,000";
             this.prize7.UseVisualStyleBackColor = false;
             // 
             // prize6
@@ -206,13 +206,13 @@
             this.prize6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.prize6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.prize6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.prize6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prize6.Font = new System.Drawing.Font("Maiandra GD", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prize6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.prize6.Location = new System.Drawing.Point(11, 400);
             this.prize6.Name = "prize6";
             this.prize6.Size = new System.Drawing.Size(205, 36);
             this.prize6.TabIndex = 19;
-            this.prize6.Text = "Test";
+            this.prize6.Text = "6. £2,000";
             this.prize6.UseVisualStyleBackColor = false;
             // 
             // prize8
@@ -224,13 +224,13 @@
             this.prize8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.prize8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.prize8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.prize8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prize8.Font = new System.Drawing.Font("Maiandra GD", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prize8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.prize8.Location = new System.Drawing.Point(11, 316);
             this.prize8.Name = "prize8";
             this.prize8.Size = new System.Drawing.Size(205, 36);
             this.prize8.TabIndex = 14;
-            this.prize8.Text = "Test";
+            this.prize8.Text = "8. £8,000";
             this.prize8.UseVisualStyleBackColor = false;
             // 
             // prize2
@@ -242,13 +242,13 @@
             this.prize2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.prize2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.prize2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.prize2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prize2.Font = new System.Drawing.Font("Maiandra GD", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prize2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.prize2.Location = new System.Drawing.Point(11, 568);
             this.prize2.Name = "prize2";
             this.prize2.Size = new System.Drawing.Size(205, 36);
             this.prize2.TabIndex = 18;
-            this.prize2.Text = "Test";
+            this.prize2.Text = "2. £200";
             this.prize2.UseVisualStyleBackColor = false;
             // 
             // prize9
@@ -260,13 +260,13 @@
             this.prize9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.prize9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.prize9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.prize9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prize9.Font = new System.Drawing.Font("Maiandra GD", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prize9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.prize9.Location = new System.Drawing.Point(11, 274);
             this.prize9.Name = "prize9";
             this.prize9.Size = new System.Drawing.Size(205, 36);
             this.prize9.TabIndex = 15;
-            this.prize9.Text = "Test";
+            this.prize9.Text = "9. £16,000";
             this.prize9.UseVisualStyleBackColor = false;
             // 
             // prize4
@@ -278,13 +278,13 @@
             this.prize4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.prize4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.prize4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.prize4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prize4.Font = new System.Drawing.Font("Maiandra GD", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prize4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.prize4.Location = new System.Drawing.Point(11, 484);
             this.prize4.Name = "prize4";
             this.prize4.Size = new System.Drawing.Size(205, 36);
             this.prize4.TabIndex = 23;
-            this.prize4.Text = "Test";
+            this.prize4.Text = "4. £500";
             this.prize4.UseVisualStyleBackColor = false;
             // 
             // prize3
@@ -296,13 +296,13 @@
             this.prize3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.prize3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.prize3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.prize3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prize3.Font = new System.Drawing.Font("Maiandra GD", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prize3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.prize3.Location = new System.Drawing.Point(11, 526);
             this.prize3.Name = "prize3";
             this.prize3.Size = new System.Drawing.Size(205, 36);
             this.prize3.TabIndex = 22;
-            this.prize3.Text = "Test";
+            this.prize3.Text = "3. £300";
             this.prize3.UseVisualStyleBackColor = false;
             // 
             // prize5
@@ -314,13 +314,13 @@
             this.prize5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.prize5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.prize5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.prize5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prize5.Font = new System.Drawing.Font("Maiandra GD", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prize5.ForeColor = System.Drawing.Color.Black;
             this.prize5.Location = new System.Drawing.Point(11, 442);
             this.prize5.Name = "prize5";
             this.prize5.Size = new System.Drawing.Size(205, 36);
             this.prize5.TabIndex = 26;
-            this.prize5.Text = "Test";
+            this.prize5.Text = "5. £1,000";
             this.prize5.UseVisualStyleBackColor = false;
             // 
             // prize11
@@ -332,13 +332,13 @@
             this.prize11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.prize11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.prize11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.prize11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prize11.Font = new System.Drawing.Font("Maiandra GD", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prize11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.prize11.Location = new System.Drawing.Point(11, 190);
             this.prize11.Name = "prize11";
             this.prize11.Size = new System.Drawing.Size(205, 36);
             this.prize11.TabIndex = 17;
-            this.prize11.Text = "Test";
+            this.prize11.Text = "11. £64,000";
             this.prize11.UseVisualStyleBackColor = false;
             // 
             // prize10
@@ -350,13 +350,13 @@
             this.prize10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.prize10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.prize10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.prize10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prize10.Font = new System.Drawing.Font("Maiandra GD", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prize10.ForeColor = System.Drawing.Color.Black;
             this.prize10.Location = new System.Drawing.Point(11, 232);
             this.prize10.Name = "prize10";
             this.prize10.Size = new System.Drawing.Size(205, 36);
             this.prize10.TabIndex = 16;
-            this.prize10.Text = "Test";
+            this.prize10.Text = "10. £32,000";
             this.prize10.UseVisualStyleBackColor = false;
             // 
             // prize13
@@ -368,13 +368,13 @@
             this.prize13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.prize13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.prize13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.prize13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prize13.Font = new System.Drawing.Font("Maiandra GD", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prize13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.prize13.Location = new System.Drawing.Point(11, 106);
             this.prize13.Name = "prize13";
             this.prize13.Size = new System.Drawing.Size(205, 36);
             this.prize13.TabIndex = 24;
-            this.prize13.Text = "Test";
+            this.prize13.Text = "13. £250,000";
             this.prize13.UseVisualStyleBackColor = false;
             // 
             // prize1
@@ -386,13 +386,13 @@
             this.prize1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.prize1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.prize1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.prize1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prize1.Font = new System.Drawing.Font("Maiandra GD", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prize1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.prize1.Location = new System.Drawing.Point(11, 610);
             this.prize1.Name = "prize1";
             this.prize1.Size = new System.Drawing.Size(205, 36);
             this.prize1.TabIndex = 27;
-            this.prize1.Text = "Test";
+            this.prize1.Text = "1. £100";
             this.prize1.UseVisualStyleBackColor = false;
             // 
             // prize14
@@ -404,13 +404,13 @@
             this.prize14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.prize14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.prize14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.prize14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prize14.Font = new System.Drawing.Font("Maiandra GD", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prize14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.prize14.Location = new System.Drawing.Point(11, 64);
             this.prize14.Name = "prize14";
             this.prize14.Size = new System.Drawing.Size(205, 36);
             this.prize14.TabIndex = 12;
-            this.prize14.Text = "Test";
+            this.prize14.Text = "14. £500,000";
             this.prize14.UseVisualStyleBackColor = false;
             // 
             // prize12
@@ -422,13 +422,13 @@
             this.prize12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.prize12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.prize12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.prize12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prize12.Font = new System.Drawing.Font("Maiandra GD", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prize12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.prize12.Location = new System.Drawing.Point(11, 148);
             this.prize12.Name = "prize12";
             this.prize12.Size = new System.Drawing.Size(205, 36);
             this.prize12.TabIndex = 20;
-            this.prize12.Text = "Test";
+            this.prize12.Text = "12. £125,000";
             this.prize12.UseVisualStyleBackColor = false;
             // 
             // prize15
@@ -440,13 +440,13 @@
             this.prize15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.prize15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.prize15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.prize15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prize15.Font = new System.Drawing.Font("Maiandra GD", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prize15.ForeColor = System.Drawing.Color.Black;
             this.prize15.Location = new System.Drawing.Point(11, 22);
             this.prize15.Name = "prize15";
             this.prize15.Size = new System.Drawing.Size(205, 36);
             this.prize15.TabIndex = 25;
-            this.prize15.Text = "Test";
+            this.prize15.Text = "15. £1,000,000";
             this.prize15.UseVisualStyleBackColor = false;
             // 
             // prizePanel
@@ -544,7 +544,7 @@
             this.timer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.timer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.timer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.timer.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timer.Font = new System.Drawing.Font("Maiandra GD", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.timer.Location = new System.Drawing.Point(377, 24);
             this.timer.Name = "timer";
@@ -554,12 +554,32 @@
             this.timer.Text = "00";
             this.timer.UseVisualStyleBackColor = false;
             // 
+            // nextQuestionbtn
+            // 
+            this.nextQuestionbtn.BackColor = System.Drawing.Color.Transparent;
+            this.nextQuestionbtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("nextQuestionbtn.BackgroundImage")));
+            this.nextQuestionbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.nextQuestionbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nextQuestionbtn.FlatAppearance.BorderSize = 0;
+            this.nextQuestionbtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.nextQuestionbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.nextQuestionbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nextQuestionbtn.Font = new System.Drawing.Font("Maiandra GD", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nextQuestionbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
+            this.nextQuestionbtn.Location = new System.Drawing.Point(255, 343);
+            this.nextQuestionbtn.Name = "nextQuestionbtn";
+            this.nextQuestionbtn.Size = new System.Drawing.Size(359, 50);
+            this.nextQuestionbtn.TabIndex = 6;
+            this.nextQuestionbtn.Text = "START";
+            this.nextQuestionbtn.UseVisualStyleBackColor = false;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1111, 649);
+            this.Controls.Add(this.nextQuestionbtn);
             this.Controls.Add(this.timer);
             this.Controls.Add(this.lifelinePanel);
             this.Controls.Add(this.prizePanel);
@@ -602,6 +622,7 @@
         private System.Windows.Forms.Button optionB;
         private System.Windows.Forms.Button optionA;
         private System.Windows.Forms.Button timer;
+        private System.Windows.Forms.Button nextQuestionbtn;
     }
 }
 
