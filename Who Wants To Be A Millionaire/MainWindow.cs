@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -10,6 +9,7 @@ namespace Who_Wants_To_Be_A_Millionaire
         public MainWindow()
         {
             InitializeComponent();
+           
 
         }
 
@@ -90,5 +90,6 @@ namespace Who_Wants_To_Be_A_Millionaire
 
 
         }
+
     }
 }
