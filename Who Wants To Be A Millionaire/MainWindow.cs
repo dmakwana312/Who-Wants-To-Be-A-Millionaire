@@ -76,10 +76,10 @@ namespace Who_Wants_To_Be_A_Millionaire
             //}
 
             List<Button> buttons = new List<Button>();
-            buttons.Add(optionA);
-            buttons.Add(optionB);
-            buttons.Add(optionC);
-            buttons.Add(optionD);
+            buttons.Add(btnOptionA);
+            buttons.Add(btnOptionB);
+            buttons.Add(btnOptionC);
+            buttons.Add(btnOptionD);
 
             foreach (Button btn in buttons)
             {

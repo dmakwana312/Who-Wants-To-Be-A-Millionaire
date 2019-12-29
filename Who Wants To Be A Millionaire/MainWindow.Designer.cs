@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
-            this.question = new System.Windows.Forms.Button();
+            this.lblQuestion = new System.Windows.Forms.Button();
             this.questionPanel = new System.Windows.Forms.Panel();
-            this.optionD = new System.Windows.Forms.Button();
-            this.optionC = new System.Windows.Forms.Button();
-            this.optionB = new System.Windows.Forms.Button();
-            this.optionA = new System.Windows.Forms.Button();
+            this.btnOptionD = new System.Windows.Forms.Button();
+            this.btnOptionC = new System.Windows.Forms.Button();
+            this.btnOptionB = new System.Windows.Forms.Button();
+            this.btnOptionA = new System.Windows.Forms.Button();
             this.prize7 = new System.Windows.Forms.Button();
             this.prize6 = new System.Windows.Forms.Button();
             this.prize8 = new System.Windows.Forms.Button();
@@ -51,9 +51,9 @@
             this.prize12 = new System.Windows.Forms.Button();
             this.prize15 = new System.Windows.Forms.Button();
             this.prizePanel = new System.Windows.Forms.Panel();
-            this.lifeline5050 = new System.Windows.Forms.Button();
-            this.lifelineAudience = new System.Windows.Forms.Button();
-            this.lifelineSwap = new System.Windows.Forms.Button();
+            this.btnLifeline5050 = new System.Windows.Forms.Button();
+            this.btnLifelineAudience = new System.Windows.Forms.Button();
+            this.btnLifelineSwap = new System.Windows.Forms.Button();
             this.lifelinePanel = new System.Windows.Forms.Panel();
             this.timer = new System.Windows.Forms.Button();
             this.nextQuestionbtn = new System.Windows.Forms.Button();
@@ -62,32 +62,32 @@
             this.lifelinePanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // question
+            // lblQuestion
             // 
-            this.question.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("question.BackgroundImage")));
-            this.question.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.question.FlatAppearance.BorderSize = 0;
-            this.question.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.question.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.question.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.question.Font = new System.Drawing.Font("Maiandra GD", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.question.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
-            this.question.Location = new System.Drawing.Point(45, 15);
-            this.question.Name = "question";
-            this.question.Size = new System.Drawing.Size(778, 100);
-            this.question.TabIndex = 1;
-            this.question.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.question.UseVisualStyleBackColor = true;
+            this.lblQuestion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lblQuestion.BackgroundImage")));
+            this.lblQuestion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.lblQuestion.FlatAppearance.BorderSize = 0;
+            this.lblQuestion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.lblQuestion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.lblQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblQuestion.Font = new System.Drawing.Font("Maiandra GD", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuestion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
+            this.lblQuestion.Location = new System.Drawing.Point(45, 15);
+            this.lblQuestion.Name = "lblQuestion";
+            this.lblQuestion.Size = new System.Drawing.Size(778, 100);
+            this.lblQuestion.TabIndex = 1;
+            this.lblQuestion.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.lblQuestion.UseVisualStyleBackColor = true;
             // 
             // questionPanel
             // 
             this.questionPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.questionPanel.BackColor = System.Drawing.Color.Black;
-            this.questionPanel.Controls.Add(this.optionD);
-            this.questionPanel.Controls.Add(this.optionC);
-            this.questionPanel.Controls.Add(this.optionB);
-            this.questionPanel.Controls.Add(this.optionA);
-            this.questionPanel.Controls.Add(this.question);
+            this.questionPanel.Controls.Add(this.btnOptionD);
+            this.questionPanel.Controls.Add(this.btnOptionC);
+            this.questionPanel.Controls.Add(this.btnOptionB);
+            this.questionPanel.Controls.Add(this.btnOptionA);
+            this.questionPanel.Controls.Add(this.lblQuestion);
             this.questionPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.questionPanel.Location = new System.Drawing.Point(0, 407);
             this.questionPanel.Name = "questionPanel";
@@ -95,89 +95,89 @@
             this.questionPanel.TabIndex = 5;
             this.questionPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.questionPanel_Paint);
             // 
-            // optionD
+            // btnOptionD
             // 
-            this.optionD.BackColor = System.Drawing.Color.Transparent;
-            this.optionD.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("optionD.BackgroundImage")));
-            this.optionD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.optionD.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.optionD.FlatAppearance.BorderSize = 0;
-            this.optionD.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.optionD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.optionD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.optionD.Font = new System.Drawing.Font("Maiandra GD", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.optionD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
-            this.optionD.Location = new System.Drawing.Point(437, 177);
-            this.optionD.Name = "optionD";
-            this.optionD.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.optionD.Size = new System.Drawing.Size(359, 50);
-            this.optionD.TabIndex = 5;
-            this.optionD.Text = "D. ";
-            this.optionD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.optionD.UseVisualStyleBackColor = false;
+            this.btnOptionD.BackColor = System.Drawing.Color.Transparent;
+            this.btnOptionD.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOptionD.BackgroundImage")));
+            this.btnOptionD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnOptionD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOptionD.FlatAppearance.BorderSize = 0;
+            this.btnOptionD.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnOptionD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnOptionD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOptionD.Font = new System.Drawing.Font("Maiandra GD", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOptionD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
+            this.btnOptionD.Location = new System.Drawing.Point(437, 177);
+            this.btnOptionD.Name = "btnOptionD";
+            this.btnOptionD.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnOptionD.Size = new System.Drawing.Size(359, 50);
+            this.btnOptionD.TabIndex = 5;
+            this.btnOptionD.Text = "D. ";
+            this.btnOptionD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOptionD.UseVisualStyleBackColor = false;
             // 
-            // optionC
+            // btnOptionC
             // 
-            this.optionC.BackColor = System.Drawing.Color.Transparent;
-            this.optionC.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("optionC.BackgroundImage")));
-            this.optionC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.optionC.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.optionC.FlatAppearance.BorderSize = 0;
-            this.optionC.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.optionC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.optionC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.optionC.Font = new System.Drawing.Font("Maiandra GD", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.optionC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
-            this.optionC.Location = new System.Drawing.Point(72, 177);
-            this.optionC.Name = "optionC";
-            this.optionC.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.optionC.Size = new System.Drawing.Size(359, 50);
-            this.optionC.TabIndex = 4;
-            this.optionC.Text = "C .";
-            this.optionC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.optionC.UseVisualStyleBackColor = false;
+            this.btnOptionC.BackColor = System.Drawing.Color.Transparent;
+            this.btnOptionC.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOptionC.BackgroundImage")));
+            this.btnOptionC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnOptionC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOptionC.FlatAppearance.BorderSize = 0;
+            this.btnOptionC.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnOptionC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnOptionC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOptionC.Font = new System.Drawing.Font("Maiandra GD", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOptionC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
+            this.btnOptionC.Location = new System.Drawing.Point(72, 177);
+            this.btnOptionC.Name = "btnOptionC";
+            this.btnOptionC.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnOptionC.Size = new System.Drawing.Size(359, 50);
+            this.btnOptionC.TabIndex = 4;
+            this.btnOptionC.Text = "C .";
+            this.btnOptionC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOptionC.UseVisualStyleBackColor = false;
             // 
-            // optionB
+            // btnOptionB
             // 
-            this.optionB.BackColor = System.Drawing.Color.Transparent;
-            this.optionB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("optionB.BackgroundImage")));
-            this.optionB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.optionB.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.optionB.FlatAppearance.BorderSize = 0;
-            this.optionB.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.optionB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.optionB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.optionB.Font = new System.Drawing.Font("Maiandra GD", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.optionB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
-            this.optionB.Location = new System.Drawing.Point(437, 121);
-            this.optionB.Name = "optionB";
-            this.optionB.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.optionB.Size = new System.Drawing.Size(359, 50);
-            this.optionB.TabIndex = 3;
-            this.optionB.Text = "B. ";
-            this.optionB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.optionB.UseVisualStyleBackColor = false;
+            this.btnOptionB.BackColor = System.Drawing.Color.Transparent;
+            this.btnOptionB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOptionB.BackgroundImage")));
+            this.btnOptionB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnOptionB.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOptionB.FlatAppearance.BorderSize = 0;
+            this.btnOptionB.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnOptionB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnOptionB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOptionB.Font = new System.Drawing.Font("Maiandra GD", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOptionB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
+            this.btnOptionB.Location = new System.Drawing.Point(437, 121);
+            this.btnOptionB.Name = "btnOptionB";
+            this.btnOptionB.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnOptionB.Size = new System.Drawing.Size(359, 50);
+            this.btnOptionB.TabIndex = 3;
+            this.btnOptionB.Text = "B. ";
+            this.btnOptionB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOptionB.UseVisualStyleBackColor = false;
             // 
-            // optionA
+            // btnOptionA
             // 
-            this.optionA.BackColor = System.Drawing.Color.Transparent;
-            this.optionA.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("optionA.BackgroundImage")));
-            this.optionA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.optionA.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.optionA.FlatAppearance.BorderSize = 0;
-            this.optionA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.optionA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.optionA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.optionA.Font = new System.Drawing.Font("Maiandra GD", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.optionA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
-            this.optionA.Location = new System.Drawing.Point(72, 121);
-            this.optionA.Name = "optionA";
-            this.optionA.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.optionA.Size = new System.Drawing.Size(359, 50);
-            this.optionA.TabIndex = 2;
-            this.optionA.Text = "A. ";
-            this.optionA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.optionA.UseVisualStyleBackColor = false;
+            this.btnOptionA.BackColor = System.Drawing.Color.Transparent;
+            this.btnOptionA.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOptionA.BackgroundImage")));
+            this.btnOptionA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnOptionA.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOptionA.FlatAppearance.BorderSize = 0;
+            this.btnOptionA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnOptionA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnOptionA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOptionA.Font = new System.Drawing.Font("Maiandra GD", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOptionA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
+            this.btnOptionA.Location = new System.Drawing.Point(72, 121);
+            this.btnOptionA.Name = "btnOptionA";
+            this.btnOptionA.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnOptionA.Size = new System.Drawing.Size(359, 50);
+            this.btnOptionA.TabIndex = 2;
+            this.btnOptionA.Text = "A. ";
+            this.btnOptionA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOptionA.UseVisualStyleBackColor = false;
             // 
             // prize7
             // 
@@ -473,62 +473,62 @@
             this.prizePanel.TabIndex = 21;
             this.prizePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.prizePanel_Paint);
             // 
-            // lifeline5050
+            // btnLifeline5050
             // 
-            this.lifeline5050.BackColor = System.Drawing.Color.Transparent;
-            this.lifeline5050.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lifeline5050.BackgroundImage")));
-            this.lifeline5050.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.lifeline5050.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lifeline5050.FlatAppearance.BorderSize = 0;
-            this.lifeline5050.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lifeline5050.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.lifeline5050.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lifeline5050.ForeColor = System.Drawing.SystemColors.Control;
-            this.lifeline5050.Location = new System.Drawing.Point(-6, 2);
-            this.lifeline5050.Name = "lifeline5050";
-            this.lifeline5050.Size = new System.Drawing.Size(115, 69);
-            this.lifeline5050.TabIndex = 6;
-            this.lifeline5050.UseVisualStyleBackColor = false;
+            this.btnLifeline5050.BackColor = System.Drawing.Color.Transparent;
+            this.btnLifeline5050.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLifeline5050.BackgroundImage")));
+            this.btnLifeline5050.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLifeline5050.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLifeline5050.FlatAppearance.BorderSize = 0;
+            this.btnLifeline5050.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnLifeline5050.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnLifeline5050.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLifeline5050.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnLifeline5050.Location = new System.Drawing.Point(-6, 2);
+            this.btnLifeline5050.Name = "btnLifeline5050";
+            this.btnLifeline5050.Size = new System.Drawing.Size(115, 69);
+            this.btnLifeline5050.TabIndex = 6;
+            this.btnLifeline5050.UseVisualStyleBackColor = false;
             // 
-            // lifelineAudience
+            // btnLifelineAudience
             // 
-            this.lifelineAudience.BackColor = System.Drawing.Color.Transparent;
-            this.lifelineAudience.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lifelineAudience.BackgroundImage")));
-            this.lifelineAudience.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.lifelineAudience.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lifelineAudience.FlatAppearance.BorderSize = 0;
-            this.lifelineAudience.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lifelineAudience.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.lifelineAudience.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lifelineAudience.ForeColor = System.Drawing.SystemColors.Control;
-            this.lifelineAudience.Location = new System.Drawing.Point(-6, 69);
-            this.lifelineAudience.Name = "lifelineAudience";
-            this.lifelineAudience.Size = new System.Drawing.Size(115, 69);
-            this.lifelineAudience.TabIndex = 22;
-            this.lifelineAudience.UseVisualStyleBackColor = false;
+            this.btnLifelineAudience.BackColor = System.Drawing.Color.Transparent;
+            this.btnLifelineAudience.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLifelineAudience.BackgroundImage")));
+            this.btnLifelineAudience.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLifelineAudience.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLifelineAudience.FlatAppearance.BorderSize = 0;
+            this.btnLifelineAudience.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnLifelineAudience.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnLifelineAudience.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLifelineAudience.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnLifelineAudience.Location = new System.Drawing.Point(-6, 69);
+            this.btnLifelineAudience.Name = "btnLifelineAudience";
+            this.btnLifelineAudience.Size = new System.Drawing.Size(115, 69);
+            this.btnLifelineAudience.TabIndex = 22;
+            this.btnLifelineAudience.UseVisualStyleBackColor = false;
             // 
-            // lifelineSwap
+            // btnLifelineSwap
             // 
-            this.lifelineSwap.BackColor = System.Drawing.Color.Transparent;
-            this.lifelineSwap.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lifelineSwap.BackgroundImage")));
-            this.lifelineSwap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.lifelineSwap.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lifelineSwap.FlatAppearance.BorderSize = 0;
-            this.lifelineSwap.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lifelineSwap.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.lifelineSwap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lifelineSwap.ForeColor = System.Drawing.SystemColors.Control;
-            this.lifelineSwap.Location = new System.Drawing.Point(-6, 136);
-            this.lifelineSwap.Name = "lifelineSwap";
-            this.lifelineSwap.Size = new System.Drawing.Size(115, 69);
-            this.lifelineSwap.TabIndex = 23;
-            this.lifelineSwap.UseVisualStyleBackColor = false;
+            this.btnLifelineSwap.BackColor = System.Drawing.Color.Transparent;
+            this.btnLifelineSwap.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLifelineSwap.BackgroundImage")));
+            this.btnLifelineSwap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLifelineSwap.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLifelineSwap.FlatAppearance.BorderSize = 0;
+            this.btnLifelineSwap.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnLifelineSwap.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnLifelineSwap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLifelineSwap.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnLifelineSwap.Location = new System.Drawing.Point(-6, 136);
+            this.btnLifelineSwap.Name = "btnLifelineSwap";
+            this.btnLifelineSwap.Size = new System.Drawing.Size(115, 69);
+            this.btnLifelineSwap.TabIndex = 23;
+            this.btnLifelineSwap.UseVisualStyleBackColor = false;
             // 
             // lifelinePanel
             // 
-            this.lifelinePanel.Controls.Add(this.lifelineSwap);
-            this.lifelinePanel.Controls.Add(this.lifelineAudience);
-            this.lifelinePanel.Controls.Add(this.lifeline5050);
+            this.lifelinePanel.Controls.Add(this.btnLifelineSwap);
+            this.lifelinePanel.Controls.Add(this.btnLifelineAudience);
+            this.lifelinePanel.Controls.Add(this.btnLifeline5050);
             this.lifelinePanel.Location = new System.Drawing.Point(0, 0);
             this.lifelinePanel.Name = "lifelinePanel";
             this.lifelinePanel.Size = new System.Drawing.Size(128, 231);
@@ -595,7 +595,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button question;
+        private System.Windows.Forms.Button lblQuestion;
         private System.Windows.Forms.Panel questionPanel;
         private System.Windows.Forms.Button prize7;
         private System.Windows.Forms.Button prize6;
@@ -613,14 +613,14 @@
         private System.Windows.Forms.Button prize12;
         private System.Windows.Forms.Button prize15;
         private System.Windows.Forms.Panel prizePanel;
-        private System.Windows.Forms.Button lifeline5050;
-        private System.Windows.Forms.Button lifelineAudience;
-        private System.Windows.Forms.Button lifelineSwap;
+        private System.Windows.Forms.Button btnLifeline5050;
+        private System.Windows.Forms.Button btnLifelineAudience;
+        private System.Windows.Forms.Button btnLifelineSwap;
         private System.Windows.Forms.Panel lifelinePanel;
-        private System.Windows.Forms.Button optionD;
-        private System.Windows.Forms.Button optionC;
-        private System.Windows.Forms.Button optionB;
-        private System.Windows.Forms.Button optionA;
+        private System.Windows.Forms.Button btnOptionD;
+        private System.Windows.Forms.Button btnOptionC;
+        private System.Windows.Forms.Button btnOptionB;
+        private System.Windows.Forms.Button btnOptionA;
         private System.Windows.Forms.Button timer;
         private System.Windows.Forms.Button nextQuestionbtn;
     }
