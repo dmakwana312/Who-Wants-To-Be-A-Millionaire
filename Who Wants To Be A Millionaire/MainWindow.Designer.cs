@@ -133,7 +133,7 @@
             this.btnOptionC.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnOptionC.Size = new System.Drawing.Size(359, 50);
             this.btnOptionC.TabIndex = 4;
-            this.btnOptionC.Text = "C .";
+            this.btnOptionC.Text = "C. ";
             this.btnOptionC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOptionC.UseVisualStyleBackColor = false;
             // 
