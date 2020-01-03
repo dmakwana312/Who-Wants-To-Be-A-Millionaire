@@ -22,7 +22,6 @@ namespace Who_Wants_To_Be_A_Millionaire
             options.Append(optionC); 
             options.Append(optionD);
             this.answer = answer;
-
         }
 
         // Check if selected option is correct
