@@ -9,7 +9,9 @@ namespace Who_Wants_To_Be_A_Millionaire
         public MainWindow()
         {
             InitializeComponent();
-           
+
+            databaseConnectivity.connect();
+            databaseConnectivity.disconnect();
 
         }
 
