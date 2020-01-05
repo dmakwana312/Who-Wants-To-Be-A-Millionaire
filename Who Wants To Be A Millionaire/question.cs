@@ -9,18 +9,19 @@ namespace Who_Wants_To_Be_A_Millionaire
     class question
     {
 
-        string questionText { get; }
-        string[] options { get; }
-        string answer;
+        public string questionText { get; }
+        public string[] options { get; }
+        public string answer;
 
         // Constructor to set question, add options to array and set answer
         public question(string questionText, string optionA, string optionB, string optionC, string optionD, string answer)
         {
+            this.options = new string[4];
             this.questionText = questionText;
-            options.Append(optionA);
-            options.Append(optionB); 
-            options.Append(optionC); 
-            options.Append(optionD);
+            this.options[0] = optionA;
+            this.options[1] = optionB; 
+            this. options[2] = optionC; 
+            this.options[3] = optionD;
             this.answer = answer;
         }
 
