@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Who_Wants_To_Be_A_Millionaire
 {
-    class question
+    class Question
     {
 
         public string questionText { get; }
@@ -14,7 +14,7 @@ namespace Who_Wants_To_Be_A_Millionaire
         public string answer;
 
         // Constructor to set question, add options to array and set answer
-        public question(string questionText, string optionA, string optionB, string optionC, string optionD, string answer)
+        public Question(string questionText, string optionA, string optionB, string optionC, string optionD, string answer)
         {
             this.options = new string[4];
             this.questionText = questionText;

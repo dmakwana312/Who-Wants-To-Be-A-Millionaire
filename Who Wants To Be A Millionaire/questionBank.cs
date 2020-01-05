@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace Who_Wants_To_Be_A_Millionaire
 {
-    class questionBank 
+    class QuestionBank 
     {
-        List<question> questions = new List<question>();
-        question lifeLineSwapQuestion = null;
+        List<Question> questions = new List<Question>();
+        Question lifeLineSwapQuestion = null;
 
         // Constructor to retrieve and accordingly set questions
-        public questionBank()
+        public QuestionBank()
         {
             setQuestions();
             setLifeLineSwapQuestion();
@@ -26,11 +26,11 @@ namespace Who_Wants_To_Be_A_Millionaire
         {
             string query = "SELECT top " + n + " * FROM Question ORDER BY rnd(ID)";
 
-            OleDbDataAdapter dataAdapter = new OleDbDataAdapter(query, databaseConnectivity.connect());
+            OleDbDataAdapter dataAdapter = new OleDbDataAdapter(query, DatabaseConnectivity.connect());
             DataSet dataset = new DataSet();
             dataAdapter.Fill(dataset);
 
-            databaseConnectivity.disconnect();
+            DatabaseConnectivity.disconnect();
             return dataset;
         }
 
@@ -41,7 +41,7 @@ namespace Who_Wants_To_Be_A_Millionaire
 
             for (int row = 0; row < dataset.Tables[0].Rows.Count; row++)
             {
-                this.questions.Add(new question(dataset.Tables[0].Rows[row].ItemArray[1].ToString(), dataset.Tables[0].Rows[row].ItemArray[2].ToString(), dataset.Tables[0].Rows[row].ItemArray[3].ToString(), dataset.Tables[0].Rows[row].ItemArray[4].ToString(), dataset.Tables[0].Rows[row].ItemArray[5].ToString(), dataset.Tables[0].Rows[row].ItemArray[6].ToString()));
+                this.questions.Add(new Question(dataset.Tables[0].Rows[row].ItemArray[1].ToString(), dataset.Tables[0].Rows[row].ItemArray[2].ToString(), dataset.Tables[0].Rows[row].ItemArray[3].ToString(), dataset.Tables[0].Rows[row].ItemArray[4].ToString(), dataset.Tables[0].Rows[row].ItemArray[5].ToString(), dataset.Tables[0].Rows[row].ItemArray[6].ToString()));
             }
 
             Console.WriteLine("Questions: " + this.questions.Count);
@@ -51,17 +51,17 @@ namespace Who_Wants_To_Be_A_Millionaire
         public void setLifeLineSwapQuestion()
         {
             DataSet dataset = importNQuestions(1);
-            this.lifeLineSwapQuestion = new question(dataset.Tables[0].Rows[0].ItemArray[1].ToString(), dataset.Tables[0].Rows[0].ItemArray[2].ToString(), dataset.Tables[0].Rows[0].ItemArray[3].ToString(), dataset.Tables[0].Rows[0].ItemArray[4].ToString(), dataset.Tables[0].Rows[0].ItemArray[5].ToString(), dataset.Tables[0].Rows[0].ItemArray[6].ToString());
+            this.lifeLineSwapQuestion = new Question(dataset.Tables[0].Rows[0].ItemArray[1].ToString(), dataset.Tables[0].Rows[0].ItemArray[2].ToString(), dataset.Tables[0].Rows[0].ItemArray[3].ToString(), dataset.Tables[0].Rows[0].ItemArray[4].ToString(), dataset.Tables[0].Rows[0].ItemArray[5].ToString(), dataset.Tables[0].Rows[0].ItemArray[6].ToString());
         }
 
         // Retrieve a question
-        public question getQuestion(int questionNumber)
+        public Question getQuestion(int questionNumber)
         {
             return questions[questionNumber];
         }
 
         // Retrieve question for the swap lifeline
-        public question getLifeLineSwapQuestion()
+        public Question getLifeLineSwapQuestion()
         {
             return lifeLineSwapQuestion;
         }

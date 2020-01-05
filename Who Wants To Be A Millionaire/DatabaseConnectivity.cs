@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using System.Data;
 namespace Who_Wants_To_Be_A_Millionaire
 {
-    public class databaseConnectivity
+    public class DatabaseConnectivity
     {
         static OleDbConnection connection = null;
 
