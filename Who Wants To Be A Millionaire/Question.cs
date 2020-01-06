@@ -20,7 +20,7 @@ namespace Who_Wants_To_Be_A_Millionaire
             this.questionText = questionText;
             this.options[0] = optionA;
             this.options[1] = optionB; 
-            this. options[2] = optionC; 
+            this.options[2] = optionC; 
             this.options[3] = optionD;
             this.answer = answer;
         }
@@ -37,6 +37,20 @@ namespace Who_Wants_To_Be_A_Millionaire
                 return false;
             }
         }
+
+        //Retrieve question text
+        public string getQuestionText()
+        {
+            return questionText;
+        }
+
+        //Retrieve options
+        public string[] getOptions()
+        {
+            return options;
+        }
+
+
 
     }
 }
