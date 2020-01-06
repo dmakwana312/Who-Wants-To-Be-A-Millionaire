@@ -44,7 +44,7 @@ namespace Who_Wants_To_Be_A_Millionaire
                 this.questions.Add(new Question(dataset.Tables[0].Rows[row].ItemArray[1].ToString(), dataset.Tables[0].Rows[row].ItemArray[2].ToString(), dataset.Tables[0].Rows[row].ItemArray[3].ToString(), dataset.Tables[0].Rows[row].ItemArray[4].ToString(), dataset.Tables[0].Rows[row].ItemArray[5].ToString(), dataset.Tables[0].Rows[row].ItemArray[6].ToString()));
             }
 
-        }
+        } 
 
         // Set question for the swap lifeline
         public void setLifeLineSwapQuestion()
