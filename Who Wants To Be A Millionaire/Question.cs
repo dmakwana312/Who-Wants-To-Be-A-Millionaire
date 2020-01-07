@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Who_Wants_To_Be_A_Millionaire
 {
-    class Question
+    public class Question
     {
 
         public string questionText { get; }

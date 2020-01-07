@@ -16,6 +16,6 @@
     <PackageReference Include="coverlet.collector" Version="1.0.1" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <ProjectReference Include="..\Who Wants To Be A Millionaire\Who Wants To Be A Millionaire.csproj" />
   </ItemGroup>
 </Project>
