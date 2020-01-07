@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data;
 using System.Data.OleDb;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Who_Wants_To_Be_A_Millionaire
 {
-    class QuestionBank 
+    internal class QuestionBank
     {
-        List<Question> questions = new List<Question>();
-        Question lifeLineSwapQuestion = null;
+        private List<Question> questions = new List<Question>();
+        private Question lifeLineSwapQuestion = null;
 
         // Constructor to retrieve and accordingly set questions
         public QuestionBank()
@@ -43,8 +38,7 @@ namespace Who_Wants_To_Be_A_Millionaire
             {
                 this.questions.Add(new Question(dataset.Tables[0].Rows[row].ItemArray[1].ToString(), dataset.Tables[0].Rows[row].ItemArray[2].ToString(), dataset.Tables[0].Rows[row].ItemArray[3].ToString(), dataset.Tables[0].Rows[row].ItemArray[4].ToString(), dataset.Tables[0].Rows[row].ItemArray[5].ToString(), dataset.Tables[0].Rows[row].ItemArray[6].ToString()));
             }
-
-        } 
+        }
 
         // Set question for the swap lifeline
         public void setLifeLineSwapQuestion()

@@ -8,8 +8,7 @@ namespace Who_Wants_To_Be_A_Millionaire
     {
         public MainWindow()
         {
-            InitializeComponent();          
-
+            InitializeComponent();
         }
 
         private void questionPanel_Paint(object sender, PaintEventArgs e)
@@ -26,8 +25,6 @@ namespace Who_Wants_To_Be_A_Millionaire
             e.Graphics.DrawLine(pen, 0, 202, questionPanel.Width, 202);
 
             pen.Dispose();
-
-
         }
 
         private void prizePanel_Paint(object sender, PaintEventArgs e)
@@ -52,7 +49,6 @@ namespace Who_Wants_To_Be_A_Millionaire
             e.Graphics.DrawRectangle(pen, rect);
 
             pen.Dispose();
-
         }
 
         private void updateQuestionPanel()
@@ -85,10 +81,6 @@ namespace Who_Wants_To_Be_A_Millionaire
                 btn.Text = counter.ToString();
                 counter++;
             }
-
-
-
         }
-
     }
 }
