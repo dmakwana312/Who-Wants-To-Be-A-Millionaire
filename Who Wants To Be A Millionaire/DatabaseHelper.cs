@@ -5,12 +5,12 @@ using System.Windows.Forms;
 
 namespace Who_Wants_To_Be_A_Millionaire
 {
-    public class DatabaseConnectivity
+    public class DatabaseHelper
     {
-        private static OleDbConnection connection = null;
+        private  OleDbConnection connection = null;
 
         // Open Connection
-        public static OleDbConnection connect()
+        private OleDbConnection connect()
         {
             string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=..\\..\\Who Wants To Be A Millionaire Database.accdb;"; ;
 
@@ -27,8 +27,23 @@ namespace Who_Wants_To_Be_A_Millionaire
             }
         }
 
+        // Import N number of question from database
+        public DataSet importNQuestions(int n)
+        {
+
+
+            string query = "SELECT top " + n + " * FROM Question ORDER BY rnd(ID)";
+
+            OleDbDataAdapter dataAdapter = new OleDbDataAdapter(query, connect());
+            DataSet dataset = new DataSet();
+            dataAdapter.Fill(dataset);
+
+            disconnect();
+            return dataset;
+        }
+
         // If Connection Is Not Open
-        public static void disconnect()
+        private void disconnect()
         {
             if (connection != null && connection.State == ConnectionState.Open) connection.Close();
         }
