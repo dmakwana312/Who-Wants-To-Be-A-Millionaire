@@ -31,9 +31,9 @@ namespace Who_Wants_To_Be_A_Millionaire
         public DataSet importNQuestions(int n)
         {
 
-
-            string query = "SELECT top " + n + " * FROM Question ORDER BY rnd(ID)";
-
+            string query = "SELECT TOP " + n + " * FROM Question ORDER BY Rnd(-(100000 * ID) * Time())";
+            //string query = "SELECT top " + n + " * FROM Question ORDER BY NEWID()";
+           
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter(query, connect());
             DataSet dataset = new DataSet();
             dataAdapter.Fill(dataset);

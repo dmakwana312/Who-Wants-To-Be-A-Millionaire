@@ -1,14 +1,25 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Who_Wants_To_Be_A_Millionaire
 {
     public partial class MainWindow : Form
     {
+
+        private int questionNo = 0;
+        private QuestionBank bank = null;
+        List<Button> buttons = new List<Button>();
+        
         public MainWindow()
         {
             InitializeComponent();
+            bank = new QuestionBank();
+            buttons.Add(btnOptionA);
+            buttons.Add(btnOptionB);
+            buttons.Add(btnOptionC);
+            buttons.Add(btnOptionD);
         }
 
         private void questionPanel_Paint(object sender, PaintEventArgs e)
@@ -51,6 +62,8 @@ namespace Who_Wants_To_Be_A_Millionaire
             pen.Dispose();
         }
 
+
+
         private void updateQuestionPanel()
         {
             int counter = 0;
@@ -70,16 +83,28 @@ namespace Who_Wants_To_Be_A_Millionaire
             //    counter++;
             //}
 
-            List<Button> buttons = new List<Button>();
-            buttons.Add(btnOptionA);
-            buttons.Add(btnOptionB);
-            buttons.Add(btnOptionC);
-            buttons.Add(btnOptionD);
+            
 
             foreach (Button btn in buttons)
             {
                 btn.Text = counter.ToString();
                 counter++;
+            }
+        }
+
+        private void nextQuestionbtn_Click(object sender, System.EventArgs e)
+        {
+            if (questionNo < 15)
+            {
+                Question currentQuestion = bank.getQuestion(questionNo++);
+                lblQuestion.Text = currentQuestion.getQuestionText();
+
+                var optionsAndButtons = currentQuestion.getOptions().Zip(buttons, (option, button) => new { Option = option, Button = button });
+
+                foreach (var ob in optionsAndButtons)
+                {
+                    ob.Button.Text = ob.Option;
+                }
             }
         }
     }

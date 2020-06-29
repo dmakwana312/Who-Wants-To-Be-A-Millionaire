@@ -572,6 +572,7 @@
             this.nextQuestionbtn.TabIndex = 6;
             this.nextQuestionbtn.Text = "START";
             this.nextQuestionbtn.UseVisualStyleBackColor = false;
+            this.nextQuestionbtn.Click += new System.EventHandler(this.nextQuestionbtn_Click);
             // 
             // MainWindow
             // 
