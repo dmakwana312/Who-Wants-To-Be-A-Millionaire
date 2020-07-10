@@ -28,7 +28,7 @@ namespace Who_Wants_To_Be_A_Millionaire
             for (int row = 0; row < dataset.Tables[0].Rows.Count; row++)
             {
                 this.questions.Add(new Question(dataset.Tables[0].Rows[row].ItemArray[1].ToString(), dataset.Tables[0].Rows[row].ItemArray[2].ToString(), dataset.Tables[0].Rows[row].ItemArray[3].ToString(), dataset.Tables[0].Rows[row].ItemArray[4].ToString(), dataset.Tables[0].Rows[row].ItemArray[5].ToString(), dataset.Tables[0].Rows[row].ItemArray[6].ToString()));
-                Console.WriteLine(dataset.Tables[0].Rows[row].ItemArray[0].ToString());
+                
             }
         }
 

@@ -62,36 +62,6 @@ namespace Who_Wants_To_Be_A_Millionaire
             pen.Dispose();
         }
 
-
-
-        private void updateQuestionPanel()
-        {
-            int counter = 0;
-
-            //List buttons = new List<Button>();
-            //Button button;
-            //foreach (var textbox in questionPanel.Controls)
-            //{
-            //    button = (Button)textbox;
-            //    button.Text = counter.ToString();
-            //    counter++;
-            //}
-
-            //foreach (Control ctrl in questionPanel.Controls)
-            //{
-            //    ctrl.Text = counter.ToString();
-            //    counter++;
-            //}
-
-            
-
-            foreach (Button btn in buttons)
-            {
-                btn.Text = counter.ToString();
-                counter++;
-            }
-        }
-
         private void nextQuestionbtn_Click(object sender, System.EventArgs e)
         {
             if (questionNo < 15)
