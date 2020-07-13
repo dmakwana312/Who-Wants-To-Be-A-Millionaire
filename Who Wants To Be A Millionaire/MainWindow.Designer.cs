@@ -115,6 +115,7 @@
             this.btnOptionD.Text = "D. ";
             this.btnOptionD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOptionD.UseVisualStyleBackColor = false;
+            this.btnOptionD.Click += new System.EventHandler(this.btnOptionD_Click);
             // 
             // btnOptionC
             // 
@@ -136,6 +137,7 @@
             this.btnOptionC.Text = "C. ";
             this.btnOptionC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOptionC.UseVisualStyleBackColor = false;
+            this.btnOptionC.Click += new System.EventHandler(this.btnOptionC_Click);
             // 
             // btnOptionB
             // 
@@ -157,6 +159,7 @@
             this.btnOptionB.Text = "B. ";
             this.btnOptionB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOptionB.UseVisualStyleBackColor = false;
+            this.btnOptionB.Click += new System.EventHandler(this.btnOptionB_Click);
             // 
             // btnOptionA
             // 
@@ -178,6 +181,7 @@
             this.btnOptionA.Text = "A. ";
             this.btnOptionA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOptionA.UseVisualStyleBackColor = false;
+            this.btnOptionA.Click += new System.EventHandler(this.btnOptionA_Click);
             // 
             // prize7
             // 

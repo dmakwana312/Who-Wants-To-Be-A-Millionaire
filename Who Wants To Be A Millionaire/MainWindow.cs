@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -10,6 +11,8 @@ namespace Who_Wants_To_Be_A_Millionaire
 
         private int questionNo = 0;
         private QuestionBank bank = null;
+        private Question currentQuestion = null;
+        
         List<Button> buttons = new List<Button>();
         
         public MainWindow()
@@ -64,14 +67,17 @@ namespace Who_Wants_To_Be_A_Millionaire
 
         private void nextQuestionbtn_Click(object sender, System.EventArgs e)
         {
-            if(questionNo == 0)
+            
+            if (questionNo == 0)
             {
                 nextQuestionbtn.Text = "Next Question";
             }
             if (questionNo < 15)
             {
-                Question currentQuestion = bank.getQuestion(questionNo++);
+                resetButtons();
+                currentQuestion = bank.getQuestion(questionNo++);
                 lblQuestion.Text = currentQuestion.getQuestionText();
+                
 
                 var optionsAndButtons = currentQuestion.getOptions().Zip(buttons, (option, button) => new { Option = option, Button = button });
 
@@ -79,6 +85,48 @@ namespace Who_Wants_To_Be_A_Millionaire
                 {
                     ob.Button.Text = ob.Button.Text.Remove(3, ob.Button.Text.Length - 3).Insert(3, ob.Option);
                 }
+            }
+        }
+
+        private void btnOptionA_Click(object sender, System.EventArgs e)
+        {
+            answerCheck(btnOptionA);
+        }
+
+        private void btnOptionB_Click(object sender, System.EventArgs e)
+        {
+            answerCheck(btnOptionB);
+        }
+
+        private void btnOptionC_Click(object sender, System.EventArgs e)
+        {
+            answerCheck(btnOptionC);
+        }
+
+        private void btnOptionD_Click(object sender, System.EventArgs e)
+        {
+            answerCheck(btnOptionD);
+        }
+
+        private void answerCheck(Button selectedOption)
+        {
+            if(currentQuestion.checkAnswer(selectedOption.Text.Substring(3, selectedOption.Text.Length - 3)))
+            {
+                selectedOption.BackgroundImage = Image.FromFile("C:\\Users\\Dipesh\\Documents\\GitHub Projects\\Who Wants To Be A Millionaire\\Who Wants To Be A Millionaire\\img\\correct.png");
+                
+            }
+            else
+            {
+                selectedOption.BackgroundImage = Image.FromFile("C:\\Users\\Dipesh\\Documents\\GitHub Projects\\Who Wants To Be A Millionaire\\Who Wants To Be A Millionaire\\img\\wrong.png");
+            }
+
+        }
+
+        private void resetButtons()
+        {
+            foreach(Button button in buttons)
+            {
+                button.BackgroundImage = Image.FromFile("C:\\Users\\Dipesh\\Documents\\GitHub Projects\\Who Wants To Be A Millionaire\\Who Wants To Be A Millionaire\\img\\button.png");
             }
         }
     }
