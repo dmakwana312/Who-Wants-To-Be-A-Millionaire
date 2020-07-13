@@ -64,6 +64,10 @@ namespace Who_Wants_To_Be_A_Millionaire
 
         private void nextQuestionbtn_Click(object sender, System.EventArgs e)
         {
+            if(questionNo == 0)
+            {
+                nextQuestionbtn.Text = "Next Question";
+            }
             if (questionNo < 15)
             {
                 Question currentQuestion = bank.getQuestion(questionNo++);
@@ -73,7 +77,7 @@ namespace Who_Wants_To_Be_A_Millionaire
 
                 foreach (var ob in optionsAndButtons)
                 {
-                    ob.Button.Text = ob.Option;
+                    ob.Button.Text = ob.Button.Text.Remove(3, ob.Button.Text.Length - 3).Insert(3, ob.Option);
                 }
             }
         }
