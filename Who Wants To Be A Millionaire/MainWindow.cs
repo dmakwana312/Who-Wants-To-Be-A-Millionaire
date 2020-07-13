@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace Who_Wants_To_Be_A_Millionaire
 {
@@ -23,6 +24,8 @@ namespace Who_Wants_To_Be_A_Millionaire
             buttons.Add(btnOptionB);
             buttons.Add(btnOptionC);
             buttons.Add(btnOptionD);
+
+            disableOptionButtons();
         }
 
         private void questionPanel_Paint(object sender, PaintEventArgs e)
@@ -67,7 +70,7 @@ namespace Who_Wants_To_Be_A_Millionaire
 
         private void nextQuestionbtn_Click(object sender, System.EventArgs e)
         {
-            
+            enableOptionButtons();
             if (questionNo == 0)
             {
                 nextQuestionbtn.Text = "Next Question";
@@ -127,6 +130,22 @@ namespace Who_Wants_To_Be_A_Millionaire
             foreach(Button button in buttons)
             {
                 button.BackgroundImage = Image.FromFile("C:\\Users\\Dipesh\\Documents\\GitHub Projects\\Who Wants To Be A Millionaire\\Who Wants To Be A Millionaire\\img\\button.png");
+            }
+        }
+
+        private void disableOptionButtons()
+        {
+            foreach(Button button in buttons)
+            {
+                button.Enabled = false;
+            }
+        }
+
+        private void enableOptionButtons()
+        {
+            foreach (Button button in buttons)
+            {
+                button.Enabled = true;
             }
         }
     }
