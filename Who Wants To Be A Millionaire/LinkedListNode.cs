@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -32,5 +33,24 @@ namespace Who_Wants_To_Be_A_Millionaire
             this.checkpoint = checkpoint;
 
         }
+
+        // Return prize
+        public Button getPrize()
+        {
+            return this.prize;
+        }
+
+        // Return checkpoint
+        public Boolean getCheckpoint()
+        {
+            return this.checkpoint;
+        }
+
+        // Return next node
+        public LinkedListNode getNext()
+        {
+            return this.next;
+        }
+
     }
 }
