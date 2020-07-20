@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Who_Wants_To_Be_A_Millionaire
 {
-    class LinkedList
+    public class LinkedList
     {
 
         // Head of the list

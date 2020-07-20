@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Who_Wants_To_Be_A_Millionaire
 {
-    class LinkedListNode
+    public class LinkedListNode
     {
 
         // Attributes for current prize and whether is a checkpoint
