@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Who_Wants_To_Be_A_Millionaire
 {
@@ -37,6 +38,12 @@ namespace Who_Wants_To_Be_A_Millionaire
 
                 node.setNext(next);
             }
+        }
+
+        // Return Head of List
+        public LinkedListNode getHead()
+        {
+            return head;
         }
     }
 }
