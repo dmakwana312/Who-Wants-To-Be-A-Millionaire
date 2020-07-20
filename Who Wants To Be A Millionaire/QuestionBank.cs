@@ -5,7 +5,7 @@ using System.Data.OleDb;
 
 namespace Who_Wants_To_Be_A_Millionaire
 {
-    internal class QuestionBank
+    public class QuestionBank
     {
         private List<Question> questions = new List<Question>();
         private Question lifeLineSwapQuestion = null;
