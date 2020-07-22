@@ -15,6 +15,11 @@ namespace Who_Wants_To_Be_A_Millionaire
         private Question currentQuestion = null;
         
         List<Button> buttons = new List<Button>();
+        LinkedList prizeList = new LinkedList();
+
+        LinkedListNode currentPrize = null;
+        LinkedListNode lastCheckpoint = null;
+        
         
         public MainWindow()
         {
@@ -26,6 +31,26 @@ namespace Who_Wants_To_Be_A_Millionaire
             buttons.Add(btnOptionD);
 
             disableOptionButtons();
+
+            prizeList.addToList(new LinkedListNode(prize1, false));
+            prizeList.addToList(new LinkedListNode(prize2, false));
+            prizeList.addToList(new LinkedListNode(prize3, false));
+            prizeList.addToList(new LinkedListNode(prize4, false));
+            prizeList.addToList(new LinkedListNode(prize5, true));
+            prizeList.addToList(new LinkedListNode(prize6, false));
+            prizeList.addToList(new LinkedListNode(prize7, false));
+            prizeList.addToList(new LinkedListNode(prize8, false));
+            prizeList.addToList(new LinkedListNode(prize9, false));
+            prizeList.addToList(new LinkedListNode(prize10, true));
+            prizeList.addToList(new LinkedListNode(prize11, false));
+            prizeList.addToList(new LinkedListNode(prize12, false));
+            prizeList.addToList(new LinkedListNode(prize13, false));
+            prizeList.addToList(new LinkedListNode(prize14, false));
+            prizeList.addToList(new LinkedListNode(prize15, true));
+
+           
+
+
         }
 
         private void questionPanel_Paint(object sender, PaintEventArgs e)
@@ -78,7 +103,7 @@ namespace Who_Wants_To_Be_A_Millionaire
             if (questionNo < 15)
             {
                 resetButtons();
-                currentQuestion = bank.getQuestion(questionNo++);
+                currentQuestion = bank.getQuestion(questionNo);
                 lblQuestion.Text = currentQuestion.getQuestionText();
                 
 
@@ -117,10 +142,33 @@ namespace Who_Wants_To_Be_A_Millionaire
             {
                 selectedOption.BackgroundImage = Image.FromFile("C:\\Users\\Dipesh\\Documents\\GitHub Projects\\Who Wants To Be A Millionaire\\Who Wants To Be A Millionaire\\img\\correct.png");
                 
+                if (questionNo == 0)
+                {
+
+                    currentPrize = prizeList.getHead();
+                }
+                else
+                {
+                    currentPrize.resetBackground();
+                    currentPrize = currentPrize.getNext();
+                }
+
+                currentPrize.setPrizeBackground();
+                if (currentPrize.getCheckpoint())
+                {
+                    lastCheckpoint = currentPrize;
+                }
+
+                questionNo += 1;
             }
             else
             {
                 selectedOption.BackgroundImage = Image.FromFile("C:\\Users\\Dipesh\\Documents\\GitHub Projects\\Who Wants To Be A Millionaire\\Who Wants To Be A Millionaire\\img\\wrong.png");
+                if(lastCheckpoint != null)
+                {
+                    currentPrize.setWrongBackground();
+                    lastCheckpoint.setPrizeBackground();
+                }
             }
 
         }
