@@ -527,6 +527,7 @@
             this.btnLifelineSwap.Size = new System.Drawing.Size(115, 69);
             this.btnLifelineSwap.TabIndex = 23;
             this.btnLifelineSwap.UseVisualStyleBackColor = false;
+            this.btnLifelineSwap.Click += new System.EventHandler(this.btnLifelineSwap_Click);
             // 
             // lifelinePanel
             // 

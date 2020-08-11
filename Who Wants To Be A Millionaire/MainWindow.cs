@@ -48,8 +48,8 @@ namespace Who_Wants_To_Be_A_Millionaire
             prizeList.addToList(new LinkedListNode(prize14, false));
             prizeList.addToList(new LinkedListNode(prize15, true));
 
-           
 
+          
 
         }
 
@@ -195,6 +195,26 @@ namespace Who_Wants_To_Be_A_Millionaire
             {
                 button.Enabled = true;
             }
+        }
+
+        private void btnLifelineSwap_Click(object sender, EventArgs e)
+        {
+            currentQuestion = bank.getLifeLineSwapQuestion();
+
+            lblQuestion.Text = currentQuestion.getQuestionText();
+
+
+            var optionsAndButtons = currentQuestion.getOptions().Zip(buttons, (option, button) => new { Option = option, Button = button });
+
+            foreach (var ob in optionsAndButtons)
+            {
+                ob.Button.Text = ob.Button.Text.Remove(3, ob.Button.Text.Length - 3).Insert(3, ob.Option);
+            }
+
+            btnLifelineSwap.BackgroundImage = Image.FromFile("C:\\Users\\Dipesh\\Documents\\GitHub Projects\\Who Wants To Be A Millionaire\\Who Wants To Be A Millionaire\\img\\swapDisabled.png");
+
+            btnLifelineSwap.Enabled = false;
+
         }
     }
 }
