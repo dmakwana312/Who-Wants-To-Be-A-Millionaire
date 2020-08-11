@@ -19,6 +19,8 @@ namespace Who_Wants_To_Be_A_Millionaire
 
         LinkedListNode currentPrize = null;
         LinkedListNode lastCheckpoint = null;
+
+        Random randomNumberGenerator = new Random();
         
         
         public MainWindow()
@@ -47,9 +49,6 @@ namespace Who_Wants_To_Be_A_Millionaire
             prizeList.addToList(new LinkedListNode(prize13, false));
             prizeList.addToList(new LinkedListNode(prize14, false));
             prizeList.addToList(new LinkedListNode(prize15, true));
-
-
-          
 
         }
 
@@ -214,6 +213,32 @@ namespace Who_Wants_To_Be_A_Millionaire
             btnLifelineSwap.BackgroundImage = Image.FromFile("C:\\Users\\Dipesh\\Documents\\GitHub Projects\\Who Wants To Be A Millionaire\\Who Wants To Be A Millionaire\\img\\swapDisabled.png");
 
             btnLifelineSwap.Enabled = false;
+
+        }
+
+        private void btnLifeline5050_Click(object sender, EventArgs e)
+        {
+            int firstOptionToRemove = randomNumberGenerator.Next(0, buttons.Count);
+
+            while (currentQuestion.checkAnswer(buttons[firstOptionToRemove].Text.Substring(3, buttons[firstOptionToRemove].Text.Length - 3)))
+            {
+                firstOptionToRemove = randomNumberGenerator.Next(0, buttons.Count);
+            }
+
+            buttons[firstOptionToRemove].Enabled = false;
+
+            int secondOptionToRemove = randomNumberGenerator.Next(0, buttons.Count);
+
+            while (currentQuestion.checkAnswer(buttons[secondOptionToRemove].Text.Substring(3, buttons[secondOptionToRemove].Text.Length - 3)) || secondOptionToRemove == firstOptionToRemove)
+            {
+                secondOptionToRemove = randomNumberGenerator.Next(0, buttons.Count);
+            }
+
+            buttons[secondOptionToRemove].Enabled = false;
+
+            btnLifeline5050.BackgroundImage = Image.FromFile("C:\\Users\\Dipesh\\Documents\\GitHub Projects\\Who Wants To Be A Millionaire\\Who Wants To Be A Millionaire\\img\\5050Disabled.png");
+
+            btnLifeline5050.Enabled = false;
 
         }
     }

@@ -493,6 +493,7 @@
             this.btnLifeline5050.Size = new System.Drawing.Size(115, 69);
             this.btnLifeline5050.TabIndex = 6;
             this.btnLifeline5050.UseVisualStyleBackColor = false;
+            this.btnLifeline5050.Click += new System.EventHandler(this.btnLifeline5050_Click);
             // 
             // btnLifelineAudience
             // 
