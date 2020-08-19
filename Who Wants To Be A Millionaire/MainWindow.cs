@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using System.Xml.Serialization;
 
 namespace Who_Wants_To_Be_A_Millionaire
@@ -13,7 +16,7 @@ namespace Who_Wants_To_Be_A_Millionaire
         private int questionNo = 0;
         private QuestionBank bank = null;
         private Question currentQuestion = null;
-        
+
         List<Button> buttons = new List<Button>();
         LinkedList prizeList = new LinkedList();
 
@@ -21,8 +24,8 @@ namespace Who_Wants_To_Be_A_Millionaire
         LinkedListNode lastCheckpoint = null;
 
         Random randomNumberGenerator = new Random();
-        
-        
+
+
         public MainWindow()
         {
             InitializeComponent();
@@ -49,6 +52,7 @@ namespace Who_Wants_To_Be_A_Millionaire
             prizeList.addToList(new LinkedListNode(prize13, false));
             prizeList.addToList(new LinkedListNode(prize14, false));
             prizeList.addToList(new LinkedListNode(prize15, true));
+
 
         }
 
@@ -95,6 +99,7 @@ namespace Who_Wants_To_Be_A_Millionaire
         private void nextQuestionbtn_Click(object sender, System.EventArgs e)
         {
             enableOptionButtons();
+            chartPollResults.Visible = false;
             if (questionNo == 0)
             {
                 nextQuestionbtn.Text = "Next Question";
@@ -104,7 +109,7 @@ namespace Who_Wants_To_Be_A_Millionaire
                 resetButtons();
                 currentQuestion = bank.getQuestion(questionNo);
                 lblQuestion.Text = currentQuestion.getQuestionText();
-                
+
 
                 var optionsAndButtons = currentQuestion.getOptions().Zip(buttons, (option, button) => new { Option = option, Button = button });
 
@@ -137,10 +142,10 @@ namespace Who_Wants_To_Be_A_Millionaire
 
         private void answerCheck(Button selectedOption)
         {
-            if(currentQuestion.checkAnswer(selectedOption.Text.Substring(3, selectedOption.Text.Length - 3)))
+            if (currentQuestion.checkAnswer(selectedOption.Text.Substring(3, selectedOption.Text.Length - 3)))
             {
                 selectedOption.BackgroundImage = Image.FromFile("C:\\Users\\Dipesh\\Documents\\GitHub Projects\\Who Wants To Be A Millionaire\\Who Wants To Be A Millionaire\\img\\correct.png");
-                
+
                 if (questionNo == 0)
                 {
 
@@ -163,7 +168,7 @@ namespace Who_Wants_To_Be_A_Millionaire
             else
             {
                 selectedOption.BackgroundImage = Image.FromFile("C:\\Users\\Dipesh\\Documents\\GitHub Projects\\Who Wants To Be A Millionaire\\Who Wants To Be A Millionaire\\img\\wrong.png");
-                if(lastCheckpoint != null)
+                if (lastCheckpoint != null)
                 {
                     currentPrize.setWrongBackground();
                     lastCheckpoint.setPrizeBackground();
@@ -174,7 +179,7 @@ namespace Who_Wants_To_Be_A_Millionaire
 
         private void resetButtons()
         {
-            foreach(Button button in buttons)
+            foreach (Button button in buttons)
             {
                 button.BackgroundImage = Image.FromFile("C:\\Users\\Dipesh\\Documents\\GitHub Projects\\Who Wants To Be A Millionaire\\Who Wants To Be A Millionaire\\img\\button.png");
             }
@@ -182,7 +187,7 @@ namespace Who_Wants_To_Be_A_Millionaire
 
         private void disableOptionButtons()
         {
-            foreach(Button button in buttons)
+            foreach (Button button in buttons)
             {
                 button.Enabled = false;
             }
@@ -241,5 +246,115 @@ namespace Who_Wants_To_Be_A_Millionaire
             btnLifeline5050.Enabled = false;
 
         }
+
+        private void btnLifelineAudience_Click(object sender, EventArgs e)
+        {
+
+            List<PollResult> pollResults = new List<PollResult>();
+
+            List<int> randomNumbers = generateRandomPollResults();
+
+            Boolean correctAnswerPollResultAdded = false;
+            for (int idx = 0; idx < buttons.Count; idx++)
+            {
+                if (buttons[idx].Enabled == true)
+                {
+
+                    if (currentQuestion.checkAnswer(buttons[idx].Text.Substring(3)))
+                    {
+
+                        pollResults.Add(new PollResult(buttons[idx].Text.Substring(0, 1), randomNumbers[randomNumbers.Count - 1]));
+
+                        correctAnswerPollResultAdded = true;
+                        randomNumbers.RemoveAt(randomNumbers.Count - 1);
+
+                    }
+                    else
+                    {
+                        int randomPollResultIndex;
+                        if (correctAnswerPollResultAdded)
+                        {
+                            if (randomNumbers.Count != 1)
+                            {
+                                randomPollResultIndex = randomNumberGenerator.Next(0, randomNumbers.Count - 2);
+                            }
+                            else
+                            {
+                                randomPollResultIndex = 0;
+                            }
+
+                        }
+                        else
+                        {
+                            randomPollResultIndex = randomNumberGenerator.Next(0, randomNumbers.Count - 1);
+
+                        }
+                        pollResults.Add(new PollResult(buttons[idx].Text.Substring(0, 1), randomNumbers[randomPollResultIndex]));
+
+
+                        randomNumbers.RemoveAt(randomPollResultIndex);
+                    }
+                }
+
+            }
+
+            displayPollResultsOnGraph(pollResults);
+
+            btnLifelineAudience.BackgroundImage = Image.FromFile("C:\\Users\\Dipesh\\Documents\\GitHub Projects\\Who Wants To Be A Millionaire\\Who Wants To Be A Millionaire\\img\\audienceDisabled.png");
+
+            btnLifelineAudience.Enabled = false;
+
+        }
+
+        private void displayPollResultsOnGraph(List<PollResult> pollResults)
+        {
+            chartPollResults.Series.Clear();
+            chartPollResults.Series.Add("poll");
+
+            chartPollResults.Series[0].BackGradientStyle = GradientStyle.LeftRight;
+            chartPollResults.Series[0].Color = Color.FromArgb(212, 175, 55);
+            chartPollResults.Series[0].BackSecondaryColor = Color.Black;
+
+
+            foreach (PollResult poll in pollResults)
+            {
+
+                chartPollResults.Series["poll"].Points.AddXY(Convert.ToString(poll.getoptionKey()), poll.getValue());
+
+            }
+
+            chartPollResults.Visible = true;
+        }
+
+        private List<int> generateRandomPollResults()
+        {
+
+            List<int> randomNumbers = new List<int>();
+
+            if (btnLifeline5050.Enabled == true)
+            {
+                randomNumbers.Add(randomNumberGenerator.Next(1, 25));
+
+                randomNumbers.Add(randomNumberGenerator.Next(25, 50) - randomNumbers[0]);
+
+                randomNumbers.Add(randomNumberGenerator.Next(50, 75) - randomNumbers[1]);
+
+                randomNumbers.Add(100 - (randomNumbers[0] + randomNumbers[1] + randomNumbers[2]));
+            }
+            else
+            {
+                randomNumbers.Add(randomNumberGenerator.Next(1, 50));
+
+                randomNumbers.Add(100 - randomNumbers[0]);
+            }
+
+            randomNumbers.Sort();
+
+            return randomNumbers;
+
+        }
+
     }
+
+    
 }
