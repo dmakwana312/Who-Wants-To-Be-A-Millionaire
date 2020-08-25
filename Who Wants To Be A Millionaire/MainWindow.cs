@@ -85,7 +85,7 @@ namespace Who_Wants_To_Be_A_Millionaire
                 e.Graphics.DrawLine(pen, 0, position, prizePanel.Width, position);
                 position += 42;
             }
-
+            
             pen = new Pen(Color.FromArgb(255, 212, 175, 55), 5);
 
             Rectangle rect = prizePanel.ClientRectangle;
@@ -98,6 +98,7 @@ namespace Who_Wants_To_Be_A_Millionaire
 
         private void nextQuestionbtn_Click(object sender, System.EventArgs e)
         {
+            
             enableOptionButtons();
             chartPollResults.Visible = false;
             if (questionNo == 0)
@@ -117,6 +118,22 @@ namespace Who_Wants_To_Be_A_Millionaire
                 {
                     ob.Button.Text = ob.Button.Text.Remove(3, ob.Button.Text.Length - 3).Insert(3, ob.Option);
                 }
+            }
+
+            setCountdownTimerText();
+            nextQuestionbtn.Visible = false;
+            countdownTimer.Start();
+        }
+
+        public void setCountdownTimerText()
+        {
+            if(questionNo < 10)
+            {
+                timer.Text = "60";
+            }
+            else
+            {
+                timer.Text = "45";
             }
         }
 
@@ -142,6 +159,8 @@ namespace Who_Wants_To_Be_A_Millionaire
 
         private void answerCheck(Button selectedOption)
         {
+            countdownTimer.Stop();
+            nextQuestionbtn.Visible = true;
             if (currentQuestion.checkAnswer(selectedOption.Text.Substring(3, selectedOption.Text.Length - 3)))
             {
                 selectedOption.BackgroundImage = Image.FromFile("C:\\Users\\Dipesh\\Documents\\GitHub Projects\\Who Wants To Be A Millionaire\\Who Wants To Be A Millionaire\\img\\correct.png");
@@ -170,9 +189,10 @@ namespace Who_Wants_To_Be_A_Millionaire
                 selectedOption.BackgroundImage = Image.FromFile("C:\\Users\\Dipesh\\Documents\\GitHub Projects\\Who Wants To Be A Millionaire\\Who Wants To Be A Millionaire\\img\\wrong.png");
                 if (lastCheckpoint != null)
                 {
-                    currentPrize.setWrongBackground();
                     lastCheckpoint.setPrizeBackground();
                 }
+                currentPrize.setWrongBackground();
+                disableOptionButtons();
             }
 
         }
@@ -354,6 +374,19 @@ namespace Who_Wants_To_Be_A_Millionaire
 
         }
 
+        private void countdownTimer_Tick(object sender, EventArgs e)
+        {
+            if(Convert.ToInt32(timer.Text) != 0)
+            {
+                timer.Text = Convert.ToString(Convert.ToInt32(timer.Text) - 1);
+            }
+
+            else
+            {
+                countdownTimer.Stop();
+                
+            }
+        }
     }
 
     

@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             this.lblQuestion = new System.Windows.Forms.Button();
             this.questionPanel = new System.Windows.Forms.Panel();
             this.btnOptionD = new System.Windows.Forms.Button();
@@ -59,6 +60,7 @@
             this.timer = new System.Windows.Forms.Button();
             this.nextQuestionbtn = new System.Windows.Forms.Button();
             this.chartPollResults = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.countdownTimer = new System.Windows.Forms.Timer(this.components);
             this.questionPanel.SuspendLayout();
             this.prizePanel.SuspendLayout();
             this.lifelinePanel.SuspendLayout();
@@ -587,17 +589,17 @@
             // chartPollResults
             // 
             this.chartPollResults.BackColor = System.Drawing.Color.Black;
-            chartArea1.AxisX.InterlacedColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
-            chartArea1.AxisX.IsLabelAutoFit = false;
-            chartArea1.AxisX.LabelStyle.Font = new System.Drawing.Font("Maiandra GD", 8F, System.Drawing.FontStyle.Bold);
-            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
-            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisX.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
-            chartArea1.AxisY.LineWidth = 0;
-            chartArea1.BackColor = System.Drawing.Color.Black;
-            chartArea1.BackSecondaryColor = System.Drawing.Color.Black;
-            chartArea1.Name = "ChartArea1";
-            this.chartPollResults.ChartAreas.Add(chartArea1);
+            chartArea2.AxisX.InterlacedColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
+            chartArea2.AxisX.IsLabelAutoFit = false;
+            chartArea2.AxisX.LabelStyle.Font = new System.Drawing.Font("Maiandra GD", 8F, System.Drawing.FontStyle.Bold);
+            chartArea2.AxisX.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
+            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.AxisX.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
+            chartArea2.AxisY.LineWidth = 0;
+            chartArea2.BackColor = System.Drawing.Color.Black;
+            chartArea2.BackSecondaryColor = System.Drawing.Color.Black;
+            chartArea2.Name = "ChartArea1";
+            this.chartPollResults.ChartAreas.Add(chartArea2);
             this.chartPollResults.Location = new System.Drawing.Point(289, 141);
             this.chartPollResults.Name = "chartPollResults";
             this.chartPollResults.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
@@ -605,6 +607,11 @@
             this.chartPollResults.TabIndex = 25;
             this.chartPollResults.Text = "chart1";
             this.chartPollResults.Visible = false;
+            // 
+            // countdownTimer
+            // 
+            this.countdownTimer.Interval = 1000;
+            this.countdownTimer.Tick += new System.EventHandler(this.countdownTimer_Tick);
             // 
             // MainWindow
             // 
@@ -659,6 +666,7 @@
         private System.Windows.Forms.Button timer;
         private System.Windows.Forms.Button nextQuestionbtn;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartPollResults;
+        private System.Windows.Forms.Timer countdownTimer;
     }
 }
 
