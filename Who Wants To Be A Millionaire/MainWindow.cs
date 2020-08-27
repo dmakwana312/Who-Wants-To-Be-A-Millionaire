@@ -59,10 +59,7 @@ namespace Who_Wants_To_Be_A_Millionaire
             prizeList.addToList(new LinkedListNode(prize13, false));
             prizeList.addToList(new LinkedListNode(prize14, false));
             prizeList.addToList(new LinkedListNode(prize15, true));
-
-
         }
-
 
         // Draw lines on question panel
         private void questionPanel_Paint(object sender, PaintEventArgs e)
@@ -111,10 +108,17 @@ namespace Who_Wants_To_Be_A_Millionaire
         // Next question button event handler
         private void nextQuestionbtn_Click(object sender, System.EventArgs e)
         {
-            
+            // Exit application
+            if(nextQuestionbtn.Text == "Exit")
+            {
+                Application.Exit();
+            }
+
             // Enable option buttons and set audience poll chart visibility to false
             enableOptionButtons();
             chartPollResults.Visible = false;
+
+            
 
             // If first question set text of start button to next question
             if (questionNo == 0)
@@ -234,8 +238,18 @@ namespace Who_Wants_To_Be_A_Millionaire
                 }
 
                 // Set wrong background to current prize and disable option buttons
-                currentPrize.setWrongBackground();
+                if(currentPrize != null)
+                {
+                    currentPrize.setWrongBackground();
+                }
+                else
+                {
+                    prizeList.getHead().setWrongBackground();
+                }
+                
                 disableOptionButtons();
+
+                nextQuestionbtn.Text = "Exit";
             }
 
         }
