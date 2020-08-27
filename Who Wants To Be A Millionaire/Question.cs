@@ -2,8 +2,9 @@
 {
     public class Question
     {
-        public string questionText { get; }
-        public string[] options { get; }
+        // Attributes
+        public string questionText;
+        public string[] options;
         public string answer;
 
         // Constructor to set question, add options to array and set answer

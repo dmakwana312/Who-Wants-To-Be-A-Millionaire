@@ -7,6 +7,7 @@ namespace Who_Wants_To_Be_A_Millionaire
 {
     public class QuestionBank
     {
+        // Attributes
         private List<Question> questions = new List<Question>();
         private Question lifeLineSwapQuestion = null;
         private DatabaseHelper databaseHelper = null;
