@@ -246,10 +246,22 @@ namespace Who_Wants_To_Be_A_Millionaire
                     prizeList.getHead().setWrongBackground();
                 }
                 
-                disableOptionButtons();
+                // Find correct answer to show player
+                foreach(Button button in buttons)
+                {
+                    if(button.Enabled == true)
+                    {
+                        if(currentQuestion.checkAnswer(button.Text))
+                        {
+                            button.BackgroundImage = Properties.Resources.correct;
+                        }
+                    }
+                }
 
                 nextQuestionbtn.Text = "Exit";
             }
+
+            disableOptionButtons();
 
         }
 
