@@ -194,7 +194,7 @@ namespace Who_Wants_To_Be_A_Millionaire
             nextQuestionbtn.Visible = true;
 
             // If correct answer selected
-            if (currentQuestion.checkAnswer(selectedOption.Text.Substring(3, selectedOption.Text.Length - 3)))
+            if (currentQuestion.checkAnswer(selectedOption.Text))
             {
                 // Set background image of option selected to correct
                 selectedOption.BackgroundImage = Properties.Resources.correct;
@@ -321,7 +321,7 @@ namespace Who_Wants_To_Be_A_Millionaire
             int firstOptionToRemove = randomNumberGenerator.Next(0, buttons.Count);
 
             // If the number generated is for the correct answer, generate a new number
-            while (currentQuestion.checkAnswer(buttons[firstOptionToRemove].Text.Substring(3, buttons[firstOptionToRemove].Text.Length - 3)))
+            while (currentQuestion.checkAnswer(buttons[firstOptionToRemove].Text))
             {
                 firstOptionToRemove = randomNumberGenerator.Next(0, buttons.Count);
             }
@@ -333,7 +333,7 @@ namespace Who_Wants_To_Be_A_Millionaire
             int secondOptionToRemove = randomNumberGenerator.Next(0, buttons.Count);
 
             // If the number generated is for the correct answer, generate a new number
-            while (currentQuestion.checkAnswer(buttons[secondOptionToRemove].Text.Substring(3, buttons[secondOptionToRemove].Text.Length - 3)) || secondOptionToRemove == firstOptionToRemove)
+            while (currentQuestion.checkAnswer(buttons[secondOptionToRemove].Text) || secondOptionToRemove == firstOptionToRemove)
             {
                 secondOptionToRemove = randomNumberGenerator.Next(0, buttons.Count);
             }
@@ -369,7 +369,7 @@ namespace Who_Wants_To_Be_A_Millionaire
                 {
 
                     // If the button is for the correct option, add the final value from list and remove value from list
-                    if (currentQuestion.checkAnswer(buttons[idx].Text.Substring(3)))
+                    if (currentQuestion.checkAnswer(buttons[idx].Text))
                     {
 
                         pollResults.Add(new PollResult(buttons[idx].Text.Substring(0, 1), randomNumbers[randomNumbers.Count - 1]));

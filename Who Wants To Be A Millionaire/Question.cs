@@ -20,9 +20,10 @@
         }
 
         // Check if selected option is correct
-        public bool checkAnswer(string selectedOpttion)
+        public bool checkAnswer(string selectedOption)
         {
-            if (this.answer == selectedOpttion)
+            string answer = selectedOption.Substring(3, selectedOption.Length - 3);
+            if (this.answer == answer)
             {
                 return true;
             }
