@@ -54,11 +54,11 @@ namespace Who_Wants_To_Be_A_Millionaire
         {
             if (this.checkpoint)
             {
-                this.prize.BackgroundImage = Image.FromFile("C:\\Users\\Dipesh\\Documents\\GitHub Projects\\Who Wants To Be A Millionaire\\Who Wants To Be A Millionaire\\img\\checkpoint.png");
+                this.prize.BackgroundImage = Properties.Resources.checkpoint;
             }
             else
             {
-                this.prize.BackgroundImage = Image.FromFile("C:\\Users\\Dipesh\\Documents\\GitHub Projects\\Who Wants To Be A Millionaire\\Who Wants To Be A Millionaire\\img\\button.png");
+                this.prize.BackgroundImage = Properties.Resources.button;
 
             }
 
@@ -66,13 +66,13 @@ namespace Who_Wants_To_Be_A_Millionaire
 
         public void setPrizeBackground()
         {
-            this.prize.BackgroundImage = Image.FromFile("C:\\Users\\Dipesh\\Documents\\GitHub Projects\\Who Wants To Be A Millionaire\\Who Wants To Be A Millionaire\\img\\prize.png");
+            this.prize.BackgroundImage = Properties.Resources.prize;
 
         }
 
         public void setWrongBackground()
         {
-            this.prize.BackgroundImage = Image.FromFile("C:\\Users\\Dipesh\\Documents\\GitHub Projects\\Who Wants To Be A Millionaire\\Who Wants To Be A Millionaire\\img\\wrong.png");
+            this.prize.BackgroundImage = Properties.Resources.wrong;
 
         }
 

@@ -197,8 +197,7 @@ namespace Who_Wants_To_Be_A_Millionaire
             if (currentQuestion.checkAnswer(selectedOption.Text.Substring(3, selectedOption.Text.Length - 3)))
             {
                 // Set background image of option selected to correct
-                selectedOption.BackgroundImage = Image.FromFile("C:\\Users\\Dipesh\\Documents\\GitHub Projects\\Who Wants To Be A Millionaire\\Who Wants To Be A Millionaire\\img\\correct.png");
-
+                selectedOption.BackgroundImage = Properties.Resources.correct;
                 // If first question, current prize is head of prize linked list
                 if (questionNo == 0)
                 {
@@ -229,7 +228,7 @@ namespace Who_Wants_To_Be_A_Millionaire
             else
             {
                 // Set selected option background image to incorrect background
-                selectedOption.BackgroundImage = Image.FromFile("C:\\Users\\Dipesh\\Documents\\GitHub Projects\\Who Wants To Be A Millionaire\\Who Wants To Be A Millionaire\\img\\wrong.png");
+                selectedOption.BackgroundImage = Properties.Resources.wrong;
 
                 // If checkpoint has been passed set prize background of checkpoint
                 if (lastCheckpoint != null)
@@ -259,7 +258,7 @@ namespace Who_Wants_To_Be_A_Millionaire
         {
             foreach (Button button in buttons)
             {
-                button.BackgroundImage = Image.FromFile("C:\\Users\\Dipesh\\Documents\\GitHub Projects\\Who Wants To Be A Millionaire\\Who Wants To Be A Millionaire\\img\\button.png");
+                button.BackgroundImage = Properties.Resources.button;
             }
         }
 
@@ -298,7 +297,7 @@ namespace Who_Wants_To_Be_A_Millionaire
             }
 
             // Set background of swap lifeline buttons and disable
-            btnLifelineSwap.BackgroundImage = Image.FromFile("C:\\Users\\Dipesh\\Documents\\GitHub Projects\\Who Wants To Be A Millionaire\\Who Wants To Be A Millionaire\\img\\swapDisabled.png");
+            btnLifelineSwap.BackgroundImage = Properties.Resources.swapDisabled;
             btnLifelineSwap.Enabled = false;
 
         }
@@ -331,7 +330,7 @@ namespace Who_Wants_To_Be_A_Millionaire
             buttons[secondOptionToRemove].Enabled = false;
 
             // Set background of 50/50 lifeline buttons and disable
-            btnLifeline5050.BackgroundImage = Image.FromFile("C:\\Users\\Dipesh\\Documents\\GitHub Projects\\Who Wants To Be A Millionaire\\Who Wants To Be A Millionaire\\img\\5050Disabled.png");
+            btnLifeline5050.BackgroundImage = Properties.Resources._5050Disabled;
             btnLifeline5050.Enabled = false;
 
         }
@@ -404,7 +403,7 @@ namespace Who_Wants_To_Be_A_Millionaire
             displayPollResultsOnGraph(pollResults);
 
             // Set disabled background of lifeline and disable button
-            btnLifelineAudience.BackgroundImage = Image.FromFile("C:\\Users\\Dipesh\\Documents\\GitHub Projects\\Who Wants To Be A Millionaire\\Who Wants To Be A Millionaire\\img\\audienceDisabled.png");
+            btnLifelineAudience.BackgroundImage = Properties.Resources.audienceDisabled;
             btnLifelineAudience.Enabled = false;
 
         }
