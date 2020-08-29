@@ -222,6 +222,12 @@ namespace Who_Wants_To_Be_A_Millionaire
 
                 // Increment question number
                 questionNo += 1;
+
+                // Set next question button to exit if final question answered correctly
+                if(questionNo == 15)
+                {
+                    nextQuestionbtn.Text = "Exit";
+                }
             }
 
             // If selected option incorrect
