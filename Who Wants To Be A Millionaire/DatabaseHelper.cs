@@ -1,44 +1,47 @@
 ﻿using System;
 using System.Data;
 using System.Data.OleDb;
+using System.Data.SQLite;
 using System.Windows.Forms;
 
 namespace Who_Wants_To_Be_A_Millionaire
 {
     public class DatabaseHelper
     {
-        private  OleDbConnection connection = null;
+        private OleDbConnection connection = null;
 
         // Open Connection
-        private OleDbConnection connect()
+        private SQLiteConnection connect()
         {
-            string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=..\\..\\Who Wants To Be A Millionaire Database.accdb;"; ;
-
-            connection = new OleDbConnection(connectionString);
+            // Create a new database connection:
+            SQLiteConnection connection = new SQLiteConnection("Data Source=questionsDatabase.db; Version = 3; New = True; Compress = True; ");
+            // Open the connection:
             try
             {
                 connection.Open();
-                return connection;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Failed: " + ex);
-                return null;
+                Console.WriteLine(ex);
             }
+            return connection;
         }
 
         // Import N number of question from database
-        public DataSet importNQuestions(int n)
+        public SQLiteDataReader importNQuestions(int n)
         {
+            // Connect to database & create command
+            SQLiteConnection connection = connect();
+            SQLiteCommand command = connection.CreateCommand();
+            
+            // Set Query and execute
+            command.CommandText = "SELECT * FROM Question WHERE ID IN (SELECT ID FROM Question ORDER BY RANDOM() LIMIT " + n + ")";
+            SQLiteDataReader dataReader = command.ExecuteReader();
 
-            string query = "SELECT TOP " + n + " * FROM Question ORDER BY Rnd(-(100000 * ID) * Time())";
-           
-            OleDbDataAdapter dataAdapter = new OleDbDataAdapter(query, connect());
-            DataSet dataset = new DataSet();
-            dataAdapter.Fill(dataset);
-
+            // Disconnect and return data from database
             disconnect();
-            return dataset;
+            return dataReader;
+
         }
 
         // If Connection Is Not Open

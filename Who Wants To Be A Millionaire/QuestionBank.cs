@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.OleDb;
+using System.Data.SQLite;
 
 namespace Who_Wants_To_Be_A_Millionaire
 {
@@ -18,26 +19,27 @@ namespace Who_Wants_To_Be_A_Millionaire
             databaseHelper = new DatabaseHelper();
             setQuestions();
             setLifeLineSwapQuestion();
-            
+
         }
 
         // Set the main 15 questions
         public void setQuestions()
         {
-            DataSet dataset = databaseHelper.importNQuestions(15);
+            SQLiteDataReader dataset = databaseHelper.importNQuestions(15);
 
-            for (int row = 0; row < dataset.Tables[0].Rows.Count; row++)
+            while (dataset.Read())
             {
-                this.questions.Add(new Question(dataset.Tables[0].Rows[row].ItemArray[1].ToString(), dataset.Tables[0].Rows[row].ItemArray[2].ToString(), dataset.Tables[0].Rows[row].ItemArray[3].ToString(), dataset.Tables[0].Rows[row].ItemArray[4].ToString(), dataset.Tables[0].Rows[row].ItemArray[5].ToString(), dataset.Tables[0].Rows[row].ItemArray[6].ToString()));
-                
+                this.questions.Add(new Question(dataset.GetString(1), dataset.GetString(2), dataset.GetString(3), dataset.GetString(4), dataset.GetString(5), dataset.GetString(6)));
+
             }
         }
 
         // Set question for the swap lifeline
         public void setLifeLineSwapQuestion()
         {
-            DataSet dataset = databaseHelper.importNQuestions(1);
-            this.lifeLineSwapQuestion = new Question(dataset.Tables[0].Rows[0].ItemArray[1].ToString(), dataset.Tables[0].Rows[0].ItemArray[2].ToString(), dataset.Tables[0].Rows[0].ItemArray[3].ToString(), dataset.Tables[0].Rows[0].ItemArray[4].ToString(), dataset.Tables[0].Rows[0].ItemArray[5].ToString(), dataset.Tables[0].Rows[0].ItemArray[6].ToString());
+            SQLiteDataReader dataset = databaseHelper.importNQuestions(1);
+            dataset.Read();
+            this.lifeLineSwapQuestion = new Question(dataset.GetString(1), dataset.GetString(2), dataset.GetString(3), dataset.GetString(4), dataset.GetString(5), dataset.GetString(6));
         }
 
         // Retrieve a question
