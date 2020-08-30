@@ -13,7 +13,7 @@ namespace Who_Wants_To_Be_A_Millionaire
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainWindow());
+            Application.Run(new MainMenu());
         }
     }
 }

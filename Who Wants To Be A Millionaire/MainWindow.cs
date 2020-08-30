@@ -109,10 +109,7 @@ namespace Who_Wants_To_Be_A_Millionaire
 
         // Next question button event handler
         private void nextQuestionbtn_Click(object sender, System.EventArgs e)
-        {
-
-            
-
+        { 
             // Exit application
             if (nextQuestionbtn.Text == "Exit")
             {
