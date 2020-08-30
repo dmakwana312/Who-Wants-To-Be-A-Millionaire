@@ -12,6 +12,7 @@ namespace Who_Wants_To_Be_A_Millionaire
 {
     public partial class MainWindow : Form
     {
+        private MainMenu mainMenuForm = null;
         // Attributes to keep track of questions
         private int questionNo = 0;
         private QuestionBank bank = null;
@@ -110,10 +111,11 @@ namespace Who_Wants_To_Be_A_Millionaire
         // Next question button event handler
         private void nextQuestionbtn_Click(object sender, System.EventArgs e)
         { 
-            // Exit application
-            if (nextQuestionbtn.Text == "Exit")
+            // Show main menu form and close this form
+            if (nextQuestionbtn.Text == "Return To Main Menu")
             {
-                Application.Exit();
+                mainMenuForm.Show();
+                this.Dispose();
             }
             else if(nextQuestionbtn.Text == "Next Question" || nextQuestionbtn.Text == "START")
             {
@@ -225,7 +227,7 @@ namespace Who_Wants_To_Be_A_Millionaire
                 // Set next question button to exit if final question answered correctly
                 if(questionNo == 15)
                 {
-                    nextQuestionbtn.Text = "Exit";
+                    nextQuestionbtn.Text = "Return To Main Menu";
                 }
                 else
                 {
@@ -267,7 +269,7 @@ namespace Who_Wants_To_Be_A_Millionaire
                     }
                 }
 
-                nextQuestionbtn.Text = "Exit";
+                nextQuestionbtn.Text = "Return To Main Menu";
             }
 
             disableOptionButtons();
@@ -523,6 +525,11 @@ namespace Who_Wants_To_Be_A_Millionaire
             font = new Font(font.FontFamily, font.Size - 0.5f, font.Style);
             
             return font;
+        }
+
+        public void setMainMenuForm(MainMenu form)
+        {
+            this.mainMenuForm = form;
         }
     }
 

@@ -36,7 +36,9 @@ namespace Who_Wants_To_Be_A_Millionaire
         private void startGamebtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            (new MainWindow()).Show();
+            MainWindow window = new MainWindow();
+            window.setMainMenuForm(this);
+            window.Show();
         }
 
         private void exitbtn_Click(object sender, EventArgs e)
