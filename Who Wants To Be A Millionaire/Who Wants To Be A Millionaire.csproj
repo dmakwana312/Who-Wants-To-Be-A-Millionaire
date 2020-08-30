@@ -85,6 +85,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FinalScoreWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinalScoreWindow.Designer.cs">
+      <DependentUpon>FinalScoreWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </Compile>
     <Compile Include="Question.cs" />
     <Compile Include="QuestionBank.cs" />
+    <EmbeddedResource Include="FinalScoreWindow.resx">
+      <DependentUpon>FinalScoreWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>

@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Who_Wants_To_Be_A_Millionaire
 {
-    public partial class MainMenu : Form
+    public partial class FinalScoreWindow : Form
     {
-        public MainMenu()
+        public FinalScoreWindow()
         {
             InitializeComponent();
         }
 
-        private void MainMenu_Paint(object sender, PaintEventArgs e)
+        private void FinalScoreWindow_Paint(object sender, PaintEventArgs e)
         {
             Pen pen = new Pen(Color.FromArgb(255, 179, 179, 179));
 
@@ -25,27 +25,12 @@ namespace Who_Wants_To_Be_A_Millionaire
             pen.Width = 2f;
             e.Graphics.DrawLine(pen, 0, 83, Width, 83);
 
-            // Draw Line For Buttons
+            // Draw Line For prize amount and button
             pen.Width = 2f;
             e.Graphics.DrawLine(pen, 0, 179, Width, 179);
             e.Graphics.DrawLine(pen, 0, 262, Width, 262);
 
             pen.Dispose();
-        }
-
-        private void startGamebtn_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            MainWindow window = new MainWindow();
-            window.setMainMenuForm(this);
-            window.Show();
-
-            (new FinalScoreWindow()).Show();
-        }
-
-        private void exitbtn_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }
