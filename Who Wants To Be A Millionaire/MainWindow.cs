@@ -118,39 +118,37 @@ namespace Who_Wants_To_Be_A_Millionaire
             {
                 Application.Exit();
             }
-
-            // Enable option buttons and set audience poll chart visibility to false
-            enableOptionButtons();
-            chartPollResults.Visible = false;
-
-            
-
-            // If first question set text of start button to next question
-            if (questionNo == 0)
+            else if(nextQuestionbtn.Text == "Next Question" || nextQuestionbtn.Text == "START")
             {
-                nextQuestionbtn.Text = "Next Question";
-            }
+                // Enable option buttons and set audience poll chart visibility to false
+                enableOptionButtons();
+                chartPollResults.Visible = false;
 
-            if (questionNo < 15)
-            {
-                // Reset buttons backgrounds and get next question
-                resetButtonBackgrounds();
-                currentQuestion = bank.getQuestion(questionNo);
-                lblQuestion.Text = currentQuestion.getQuestionText();
-
-            // Set option button texts
-            var optionsAndButtons = currentQuestion.getOptions().Zip(buttons, (option, button) => new { Option = option, Button = button });
-
-                foreach (var ob in optionsAndButtons)
+                if (questionNo < 15)
                 {
-                    ob.Button.Text = ob.Button.Text.Remove(3, ob.Button.Text.Length - 3).Insert(3, ob.Option);
+                    // Reset buttons backgrounds and get next question
+                    resetButtonBackgrounds();
+                    currentQuestion = bank.getQuestion(questionNo);
+                    lblQuestion.Text = currentQuestion.getQuestionText();
+
+                    // Set option button texts
+                    var optionsAndButtons = currentQuestion.getOptions().Zip(buttons, (option, button) => new { Option = option, Button = button });
+
+                    foreach (var ob in optionsAndButtons)
+                    {
+                        ob.Button.Text = ob.Button.Text.Remove(3, ob.Button.Text.Length - 3).Insert(3, ob.Option);
+                    }
                 }
+
+                // Set text of countdown timer and start timer.
+                setCountdownTimerText();
+                countdownTimer.Start();
+
+                // Show question number in next question button
+                nextQuestionbtn.Text = "Question " + (questionNo + 1);
             }
 
-            // Set text of countdown timer, hide next question button and start timer.
-            setCountdownTimerText();
-            nextQuestionbtn.Visible = false;
-            countdownTimer.Start();
+
         }
 
         // Set countdown timer start value based on question number
@@ -194,9 +192,8 @@ namespace Who_Wants_To_Be_A_Millionaire
         private void answerCheck(Button selectedOption)
         {
 
-            // Stop countdown and make next question button invisible
+            // Stop countdown
             countdownTimer.Stop();
-            nextQuestionbtn.Visible = true;
 
             // If correct answer selected
             if (currentQuestion.checkAnswer(selectedOption.Text))
@@ -232,6 +229,10 @@ namespace Who_Wants_To_Be_A_Millionaire
                 if(questionNo == 15)
                 {
                     nextQuestionbtn.Text = "Exit";
+                }
+                else
+                {
+                    nextQuestionbtn.Text = "Next Question";
                 }
             }
 
