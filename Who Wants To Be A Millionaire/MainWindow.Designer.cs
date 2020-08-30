@@ -75,14 +75,16 @@
             this.lblQuestion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.lblQuestion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.lblQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblQuestion.Font = new System.Drawing.Font("Maiandra GD", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuestion.Font = new System.Drawing.Font("Maiandra GD", 10F, System.Drawing.FontStyle.Bold);
             this.lblQuestion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.lblQuestion.Location = new System.Drawing.Point(45, 15);
             this.lblQuestion.Name = "lblQuestion";
+            this.lblQuestion.Padding = new System.Windows.Forms.Padding(50, 0, 50, 0);
             this.lblQuestion.Size = new System.Drawing.Size(778, 100);
             this.lblQuestion.TabIndex = 1;
             this.lblQuestion.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.lblQuestion.UseVisualStyleBackColor = true;
+            this.lblQuestion.TextChanged += new System.EventHandler(this.lblQuestion_TextChanged);
             // 
             // questionPanel
             // 

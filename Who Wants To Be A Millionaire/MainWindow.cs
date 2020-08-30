@@ -59,6 +59,8 @@ namespace Who_Wants_To_Be_A_Millionaire
             prizeList.addToList(new LinkedListNode(prize13, false));
             prizeList.addToList(new LinkedListNode(prize14, false));
             prizeList.addToList(new LinkedListNode(prize15, true));
+
+            
         }
 
         // Draw lines on question panel
@@ -108,8 +110,11 @@ namespace Who_Wants_To_Be_A_Millionaire
         // Next question button event handler
         private void nextQuestionbtn_Click(object sender, System.EventArgs e)
         {
+
+            
+
             // Exit application
-            if(nextQuestionbtn.Text == "Exit")
+            if (nextQuestionbtn.Text == "Exit")
             {
                 Application.Exit();
             }
@@ -133,8 +138,8 @@ namespace Who_Wants_To_Be_A_Millionaire
                 currentQuestion = bank.getQuestion(questionNo);
                 lblQuestion.Text = currentQuestion.getQuestionText();
 
-                // Set option button texts
-                var optionsAndButtons = currentQuestion.getOptions().Zip(buttons, (option, button) => new { Option = option, Button = button });
+            // Set option button texts
+            var optionsAndButtons = currentQuestion.getOptions().Zip(buttons, (option, button) => new { Option = option, Button = button });
 
                 foreach (var ob in optionsAndButtons)
                 {
@@ -481,8 +486,9 @@ namespace Who_Wants_To_Be_A_Millionaire
         // Countdown timer
         private void countdownTimer_Tick(object sender, EventArgs e)
         {
+
             // If visible timer is not 0, decrement value, else stop countdown
-            if(Convert.ToInt32(timer.Text) != 0)
+            if (Convert.ToInt32(timer.Text) != 0)
             {
                 timer.Text = Convert.ToString(Convert.ToInt32(timer.Text) - 1);
             }
@@ -493,7 +499,35 @@ namespace Who_Wants_To_Be_A_Millionaire
                 
             }
         }
+
+        private void lblQuestion_TextChanged(object sender, EventArgs e)
+        {
+            
+                Control control = (sender as Control);
+                control.Font = sizeTextToControl(control, this.CreateGraphics(), control.Padding.Right);
+            
+        }
+
+        private Font sizeTextToControl(Control control, Graphics graphic, int padding)
+        {
+            // Create a small font
+            Font font;
+            font = new Font(control.Font.FontFamily, 6.0f, control.Font.Style);
+            SizeF textSize = graphic.MeasureString(control.Text, font);
+
+            // Loop until it fits perfect
+            while ((textSize.Width < control.Width - padding) && (textSize.Height < control.Height - padding))
+            {
+                font = new Font(font.FontFamily, font.Size + 0.5f, font.Style);
+                textSize = graphic.MeasureString(control.Text, font);
+            }
+            
+            font = new Font(font.FontFamily, font.Size - 0.5f, font.Style);
+            
+            return font;
+        }
     }
 
-    
+
+   
 }
