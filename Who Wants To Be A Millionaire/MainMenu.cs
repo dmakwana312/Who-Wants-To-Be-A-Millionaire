@@ -39,8 +39,6 @@ namespace Who_Wants_To_Be_A_Millionaire
             MainWindow window = new MainWindow();
             window.setMainMenuForm(this);
             window.Show();
-
-            (new FinalScoreWindow()).Show();
         }
 
         private void exitbtn_Click(object sender, EventArgs e)

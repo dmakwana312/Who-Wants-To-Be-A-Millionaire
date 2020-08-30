@@ -69,6 +69,7 @@
             this.btnReturnToMainMenu.TabIndex = 11;
             this.btnReturnToMainMenu.Text = "Main Menu";
             this.btnReturnToMainMenu.UseVisualStyleBackColor = false;
+            this.btnReturnToMainMenu.Click += new System.EventHandler(this.btnReturnToMainMenu_Click);
             // 
             // lblPrizeAmount
             // 

@@ -12,6 +12,8 @@ namespace Who_Wants_To_Be_A_Millionaire
 {
     public partial class FinalScoreWindow : Form
     {
+        private MainMenu mainMenuForm = null;
+
         public FinalScoreWindow()
         {
             InitializeComponent();
@@ -31,6 +33,17 @@ namespace Who_Wants_To_Be_A_Millionaire
             e.Graphics.DrawLine(pen, 0, 262, Width, 262);
 
             pen.Dispose();
+        }
+
+        private void btnReturnToMainMenu_Click(object sender, EventArgs e)
+        {
+            mainMenuForm.Show();
+            this.Dispose();
+        }
+
+        public void setMainMenuForm(MainMenu form)
+        {
+            this.mainMenuForm = form;
         }
     }
 }

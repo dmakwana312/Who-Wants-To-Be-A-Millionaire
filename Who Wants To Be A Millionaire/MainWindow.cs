@@ -112,9 +112,11 @@ namespace Who_Wants_To_Be_A_Millionaire
         private void nextQuestionbtn_Click(object sender, System.EventArgs e)
         { 
             // Show main menu form and close this form
-            if (nextQuestionbtn.Text == "Return To Main Menu")
+            if (nextQuestionbtn.Text == "Continue")
             {
-                mainMenuForm.Show();
+                FinalScoreWindow window = new FinalScoreWindow();
+                window.setMainMenuForm(this.mainMenuForm);
+                window.Show();
                 this.Dispose();
             }
             else if(nextQuestionbtn.Text == "Next Question" || nextQuestionbtn.Text == "START")
@@ -227,7 +229,7 @@ namespace Who_Wants_To_Be_A_Millionaire
                 // Set next question button to exit if final question answered correctly
                 if(questionNo == 15)
                 {
-                    nextQuestionbtn.Text = "Return To Main Menu";
+                    nextQuestionbtn.Text = "Continue";
                 }
                 else
                 {
@@ -269,7 +271,7 @@ namespace Who_Wants_To_Be_A_Millionaire
                     }
                 }
 
-                nextQuestionbtn.Text = "Return To Main Menu";
+                nextQuestionbtn.Text = "Continue";
             }
 
             disableOptionButtons();
