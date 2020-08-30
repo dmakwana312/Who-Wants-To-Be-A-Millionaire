@@ -32,5 +32,16 @@ namespace Who_Wants_To_Be_A_Millionaire
 
             pen.Dispose();
         }
+
+        private void startGamebtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            (new MainWindow()).Show();
+        }
+
+        private void exitbtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

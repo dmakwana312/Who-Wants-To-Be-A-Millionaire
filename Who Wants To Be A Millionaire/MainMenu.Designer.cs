@@ -50,6 +50,7 @@
             this.startGamebtn.TabIndex = 7;
             this.startGamebtn.Text = "Start Game";
             this.startGamebtn.UseVisualStyleBackColor = false;
+            this.startGamebtn.Click += new System.EventHandler(this.startGamebtn_Click);
             // 
             // exitbtn
             // 
@@ -67,6 +68,7 @@
             this.exitbtn.TabIndex = 8;
             this.exitbtn.Text = "Exit";
             this.exitbtn.UseVisualStyleBackColor = false;
+            this.exitbtn.Click += new System.EventHandler(this.exitbtn_Click);
             // 
             // lblTitle
             // 
