@@ -59,7 +59,7 @@
             this.btnLifeline5050 = new System.Windows.Forms.Button();
             this.chartPollResults = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.countdownTimer = new System.Windows.Forms.Timer(this.components);
-            this.nextQuestionbtn = new System.Windows.Forms.Button();
+            this.btnNextQuestion = new System.Windows.Forms.Button();
             this.timer = new System.Windows.Forms.Button();
             this.questionPanel.SuspendLayout();
             this.prizePanel.SuspendLayout();
@@ -575,25 +575,25 @@
             this.countdownTimer.Interval = 1000;
             this.countdownTimer.Tick += new System.EventHandler(this.countdownTimer_Tick);
             // 
-            // nextQuestionbtn
+            // btnNextQuestion
             // 
-            this.nextQuestionbtn.BackColor = System.Drawing.Color.Transparent;
-            this.nextQuestionbtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("nextQuestionbtn.BackgroundImage")));
-            this.nextQuestionbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.nextQuestionbtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.nextQuestionbtn.FlatAppearance.BorderSize = 0;
-            this.nextQuestionbtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.nextQuestionbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.nextQuestionbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nextQuestionbtn.Font = new System.Drawing.Font("Maiandra GD", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nextQuestionbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
-            this.nextQuestionbtn.Location = new System.Drawing.Point(255, 343);
-            this.nextQuestionbtn.Name = "nextQuestionbtn";
-            this.nextQuestionbtn.Size = new System.Drawing.Size(359, 50);
-            this.nextQuestionbtn.TabIndex = 6;
-            this.nextQuestionbtn.Text = "START";
-            this.nextQuestionbtn.UseVisualStyleBackColor = false;
-            this.nextQuestionbtn.Click += new System.EventHandler(this.nextQuestionbtn_Click);
+            this.btnNextQuestion.BackColor = System.Drawing.Color.Transparent;
+            this.btnNextQuestion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNextQuestion.BackgroundImage")));
+            this.btnNextQuestion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNextQuestion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNextQuestion.FlatAppearance.BorderSize = 0;
+            this.btnNextQuestion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnNextQuestion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnNextQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNextQuestion.Font = new System.Drawing.Font("Maiandra GD", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNextQuestion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
+            this.btnNextQuestion.Location = new System.Drawing.Point(255, 343);
+            this.btnNextQuestion.Name = "btnNextQuestion";
+            this.btnNextQuestion.Size = new System.Drawing.Size(359, 50);
+            this.btnNextQuestion.TabIndex = 6;
+            this.btnNextQuestion.Text = "START";
+            this.btnNextQuestion.UseVisualStyleBackColor = false;
+            this.btnNextQuestion.Click += new System.EventHandler(this.nextQuestionbtn_Click);
             // 
             // timer
             // 
@@ -622,7 +622,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1111, 649);
             this.Controls.Add(this.chartPollResults);
-            this.Controls.Add(this.nextQuestionbtn);
+            this.Controls.Add(this.btnNextQuestion);
             this.Controls.Add(this.timer);
             this.Controls.Add(this.lifelinePanel);
             this.Controls.Add(this.prizePanel);
@@ -668,7 +668,7 @@
         private System.Windows.Forms.Button btnOptionB;
         private System.Windows.Forms.Button btnOptionA;
         private System.Windows.Forms.Button timer;
-        private System.Windows.Forms.Button nextQuestionbtn;
+        private System.Windows.Forms.Button btnNextQuestion;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartPollResults;
         private System.Windows.Forms.Timer countdownTimer;
     }

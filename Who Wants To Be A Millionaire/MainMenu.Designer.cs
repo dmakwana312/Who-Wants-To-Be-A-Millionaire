@@ -29,46 +29,46 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
-            this.startGamebtn = new System.Windows.Forms.Button();
-            this.exitbtn = new System.Windows.Forms.Button();
+            this.btnStartGame = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // startGamebtn
+            // btnStartGame
             // 
-            this.startGamebtn.BackColor = System.Drawing.Color.Transparent;
-            this.startGamebtn.BackgroundImage = global::Who_Wants_To_Be_A_Millionaire.Properties.Resources.button;
-            this.startGamebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.startGamebtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.startGamebtn.FlatAppearance.BorderSize = 0;
-            this.startGamebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.startGamebtn.Font = new System.Drawing.Font("Maiandra GD", 15F, System.Drawing.FontStyle.Bold);
-            this.startGamebtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
-            this.startGamebtn.Location = new System.Drawing.Point(135, 158);
-            this.startGamebtn.Name = "startGamebtn";
-            this.startGamebtn.Size = new System.Drawing.Size(190, 42);
-            this.startGamebtn.TabIndex = 7;
-            this.startGamebtn.Text = "Start Game";
-            this.startGamebtn.UseVisualStyleBackColor = false;
-            this.startGamebtn.Click += new System.EventHandler(this.startGamebtn_Click);
+            this.btnStartGame.BackColor = System.Drawing.Color.Transparent;
+            this.btnStartGame.BackgroundImage = global::Who_Wants_To_Be_A_Millionaire.Properties.Resources.button;
+            this.btnStartGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnStartGame.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStartGame.FlatAppearance.BorderSize = 0;
+            this.btnStartGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStartGame.Font = new System.Drawing.Font("Maiandra GD", 15F, System.Drawing.FontStyle.Bold);
+            this.btnStartGame.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
+            this.btnStartGame.Location = new System.Drawing.Point(135, 158);
+            this.btnStartGame.Name = "btnStartGame";
+            this.btnStartGame.Size = new System.Drawing.Size(190, 42);
+            this.btnStartGame.TabIndex = 7;
+            this.btnStartGame.Text = "Start Game";
+            this.btnStartGame.UseVisualStyleBackColor = false;
+            this.btnStartGame.Click += new System.EventHandler(this.startGamebtn_Click);
             // 
-            // exitbtn
+            // btnExit
             // 
-            this.exitbtn.BackColor = System.Drawing.Color.Transparent;
-            this.exitbtn.BackgroundImage = global::Who_Wants_To_Be_A_Millionaire.Properties.Resources.button;
-            this.exitbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.exitbtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.exitbtn.FlatAppearance.BorderSize = 0;
-            this.exitbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitbtn.Font = new System.Drawing.Font("Maiandra GD", 15F, System.Drawing.FontStyle.Bold);
-            this.exitbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
-            this.exitbtn.Location = new System.Drawing.Point(136, 241);
-            this.exitbtn.Name = "exitbtn";
-            this.exitbtn.Size = new System.Drawing.Size(190, 42);
-            this.exitbtn.TabIndex = 8;
-            this.exitbtn.Text = "Exit";
-            this.exitbtn.UseVisualStyleBackColor = false;
-            this.exitbtn.Click += new System.EventHandler(this.exitbtn_Click);
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.BackgroundImage = global::Who_Wants_To_Be_A_Millionaire.Properties.Resources.button;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Maiandra GD", 15F, System.Drawing.FontStyle.Bold);
+            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
+            this.btnExit.Location = new System.Drawing.Point(136, 241);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(190, 42);
+            this.btnExit.TabIndex = 8;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.exitbtn_Click);
             // 
             // lblTitle
             // 
@@ -96,8 +96,8 @@
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(465, 341);
             this.Controls.Add(this.lblTitle);
-            this.Controls.Add(this.exitbtn);
-            this.Controls.Add(this.startGamebtn);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnStartGame);
             this.MaximizeBox = false;
             this.Name = "MainMenu";
             this.Text = "MainMenu";
@@ -108,8 +108,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button startGamebtn;
-        private System.Windows.Forms.Button exitbtn;
+        private System.Windows.Forms.Button btnStartGame;
+        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button lblTitle;
     }
 }

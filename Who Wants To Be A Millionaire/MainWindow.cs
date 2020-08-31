@@ -112,7 +112,7 @@ namespace Who_Wants_To_Be_A_Millionaire
         private void nextQuestionbtn_Click(object sender, System.EventArgs e)
         { 
             // Show final score window form and close this form
-            if (nextQuestionbtn.Text == "Continue")
+            if (btnNextQuestion.Text == "Continue")
             {
                 FinalScoreWindow window;
                 
@@ -131,7 +131,7 @@ namespace Who_Wants_To_Be_A_Millionaire
                 window.Show();
                 this.Dispose();
             }
-            else if(nextQuestionbtn.Text == "Next Question" || nextQuestionbtn.Text == "START")
+            else if(btnNextQuestion.Text == "Next Question" || btnNextQuestion.Text == "START")
             {
                 // Enable option buttons and set audience poll chart visibility to false
                 enableOptionButtons();
@@ -159,7 +159,7 @@ namespace Who_Wants_To_Be_A_Millionaire
                 countdownTimer.Start();
 
                 // Show question number in next question button
-                nextQuestionbtn.Text = "Question " + (questionNo + 1);
+                btnNextQuestion.Text = "Question " + (questionNo + 1);
             }
 
 
@@ -242,11 +242,11 @@ namespace Who_Wants_To_Be_A_Millionaire
                 // Set next question button to exit if final question answered correctly
                 if(questionNo == 15)
                 {
-                    nextQuestionbtn.Text = "Continue";
+                    btnNextQuestion.Text = "Continue";
                 }
                 else
                 {
-                    nextQuestionbtn.Text = "Next Question";
+                    btnNextQuestion.Text = "Next Question";
                 }
             }
 
@@ -284,7 +284,7 @@ namespace Who_Wants_To_Be_A_Millionaire
                     }
                 }
 
-                nextQuestionbtn.Text = "Continue";
+                btnNextQuestion.Text = "Continue";
             }
 
             disableOptionButtons();
