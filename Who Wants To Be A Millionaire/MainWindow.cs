@@ -546,6 +546,11 @@ namespace Who_Wants_To_Be_A_Millionaire
         {
             this.mainMenuForm = form;
         }
+
+        private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 
 

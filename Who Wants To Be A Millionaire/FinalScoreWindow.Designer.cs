@@ -99,6 +99,7 @@
             this.MaximizeBox = false;
             this.Name = "FinalScoreWindow";
             this.Text = "FinalScoreWindow";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FinalScoreWindow_FormClosing);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FinalScoreWindow_Paint);
             this.ResumeLayout(false);
 
