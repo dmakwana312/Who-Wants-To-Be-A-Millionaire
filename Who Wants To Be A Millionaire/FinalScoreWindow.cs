@@ -13,10 +13,10 @@ namespace Who_Wants_To_Be_A_Millionaire
     public partial class FinalScoreWindow : Form
     {
         private MainMenu mainMenuForm = null;
-
-        public FinalScoreWindow()
+        public FinalScoreWindow(string score)
         {
             InitializeComponent();
+            lblPrizeAmount.Text = score.Substring(3, score.Length - 3);
         }
 
         private void FinalScoreWindow_Paint(object sender, PaintEventArgs e)

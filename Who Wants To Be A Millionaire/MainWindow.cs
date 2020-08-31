@@ -111,10 +111,22 @@ namespace Who_Wants_To_Be_A_Millionaire
         // Next question button event handler
         private void nextQuestionbtn_Click(object sender, System.EventArgs e)
         { 
-            // Show main menu form and close this form
+            // Show final score window form and close this form
             if (nextQuestionbtn.Text == "Continue")
             {
-                FinalScoreWindow window = new FinalScoreWindow();
+                FinalScoreWindow window;
+                
+                // If checkpoint has been passed, that is the final score else final score is £0
+                if(lastCheckpoint != null)
+                {
+                    window = new FinalScoreWindow(lastCheckpoint.getPrize().Text);
+                }
+                else
+                {
+                    window = new FinalScoreWindow("0. £0");
+                }
+
+                // Pass main menu form to final score window, show final score window and dispose of current open window
                 window.setMainMenuForm(this.mainMenuForm);
                 window.Show();
                 this.Dispose();
@@ -130,6 +142,7 @@ namespace Who_Wants_To_Be_A_Millionaire
                     // Reset buttons backgrounds and get next question
                     resetButtonBackgrounds();
                     currentQuestion = bank.getQuestion(questionNo);
+                    Console.WriteLine(currentQuestion.answer);
                     lblQuestion.Text = currentQuestion.getQuestionText();
 
                     // Set option button texts
