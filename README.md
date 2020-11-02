@@ -15,3 +15,8 @@ This repository contains the source code for the Who Wants To Be Millionaire tha
 * Highscore system
 * Ability to save and return to games
 * Allow players to add custom questions
+
+### Questions
+
+Question obtained from  [***Here Copyright © Labmaster, 2005***](https://gamefaqs.gamespot.com/gba/919785-who-wants-to-be-a-millionaire-2nd-edition/faqs/40044) 
+
